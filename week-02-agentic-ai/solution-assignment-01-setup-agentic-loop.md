@@ -6,7 +6,7 @@ Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
 
 ## Purpose
 
-In this assignment, you will set up your local development environment for Agentic AI using Claude Code. You will install and authenticate Claude Code CLI, configure the VS Code extension, fork and clone the starter repository, and observe how the Agentic Loop (Gather → Act → Verify) works in practice.
+In this assignment, you will set up your local development environment for Agentic AI using Claude Code. You will install and authenticate Claude Code CLI, fork and clone the starter repository, and observe how the Agentic Loop (Gather → Act → Verify) works in practice.
 
 ---
 
@@ -18,13 +18,13 @@ Install the Claude Code CLI globally and authenticate it using your Anthropic ac
 
 ### Evidence
 
-#### Screenshot 1 — Claude Code version check
+#### Screenshot 1 — Terminal showing `claude --version` with the version number visible
 
 ![Screenshot 1](screenshots/assign-1-task-1-ss-1.png)
 
 ---
 
-#### Screenshot 2 — Claude Code authenticated in terminal
+#### Screenshot 2 — Claude Code authenticated and showing the terminal prompt (your name visible)
 
 ![Screenshot 1](screenshots/assign-1-task-1-ss-2.png)
 
@@ -38,7 +38,7 @@ Fork the provided GitHub repository, clone it to your local machine, and open it
 
 ### Evidence
 
-#### Screenshot 3 — Project opened in VS Code
+#### Screenshot 3 — VS Code with the project open, file tree visible showing `index.html`, `style.css`, `images/`
 
 ![Screenshot 1](screenshots/assign-1-task-2-ss-3.png)
 
@@ -52,13 +52,13 @@ Interact with Claude Code and observe how it performs the Agentic Loop (Gather �
 
 ### Evidence
 
-#### Screenshot 4 — Claude reading project files and responding
+#### Screenshot 4 — Claude's response to the first question, showing it read the files (tool calls visible)
 
 ![Screenshot 1](screenshots/assign-1-task-3-ss-4.png)
 
 ---
 
-#### Screenshot 5 — Claude executing command to count CSS lines
+#### Screenshot 5 — Claude's response to the second question, showing it ran a command and reported the line count
 
 ![Screenshot 1](screenshots/assign-1-task-3-ss-5.png)
 
@@ -67,6 +67,7 @@ Interact with Claude Code and observe how it performs the Agentic Loop (Gather �
 # Submission Instructions
 
 - Add all required screenshots in your GitHub repository submission
+- Full name must be visible in required screenshots
 - Push your completed work to your forked repository
 - Submit your GitHub repository URL below
 
@@ -84,7 +85,6 @@ Paste your forked repository URL here:
 
 - [ ] Claude Code CLI installed successfully
 - [ ] Claude Code authenticated successfully
-- [ ] VS Code extension installed and working
 - [ ] Repository forked successfully
 - [ ] Repository cloned and opened in VS Code
 - [ ] All required screenshots added

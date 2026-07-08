@@ -18,7 +18,7 @@ Create the required `.claude/skills/` directory structure for all skills.
 
 ### Evidence
 
-#### Screenshot 1 — Skills folder structure in VS Code
+#### Screenshot 1 — VS Code sidebar showing `.claude/skills/` folder with all 4 subfolders visible
 
 ![Screenshot 1](screenshots/assign-3-task-1-ss-1.png)
 
@@ -32,13 +32,13 @@ Place all required skill files into their correct directories and verify their c
 
 ### Evidence
 
-#### Screenshot 2 — scaffold-terraform skill folder contents
+#### Screenshot 2 — `.claude/skills/scaffold-terraform/` open in VS Code showing both `SKILL.md` and `template-spec.md`
 
 ![Screenshot 2](screenshots/assign-3-task-2-ss-2.png)
 
 ---
 
-#### Screenshot 3 — tf-plan/SKILL.md showing allowed-tools restrictions
+#### Screenshot 3 — Screenshot 3 — `tf-plan/SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no Write) and `disable-model-invocation: true`
 
 ![Screenshot 3](screenshots/assign-3-task-2-ss-3.png)
 
@@ -52,13 +52,13 @@ Execute the `/scaffold-terraform` skill to generate a full Terraform infrastruct
 
 ### Evidence
 
-#### Screenshot 4 — Claude scaffold execution result
+#### Screenshot 4 — Claude's response showing the scaffold complete with the file list
 
 ![Screenshot 4](screenshots/assign-3-task-3-ss-4.png)
 
 ---
 
-#### Screenshot 5 — Generated terraform/ folder with all files
+#### Screenshot 5 — VS Code sidebar showing the `terraform/` folder with all generated files inside
 
 ![Screenshot 5](screenshots/assign-3-task-3-ss-5.png)
 
@@ -72,7 +72,7 @@ Initialize Terraform and execute the `/tf-plan` skill to observe plan execution 
 
 ### Evidence
 
-#### Screenshot 6 — /tf-plan execution and Claude analysis output
+#### Screenshot 6 — Claude's `/tf-plan` response showing it ran the command and analyzed the result (pass or auth error both count)
 
 ![Screenshot 6](screenshots/assign-3-task-4-ss-6.png)
 
@@ -92,6 +92,11 @@ Paste your forked repository URL here:
 
 `__________________________`
 
+## LinkedIn post URL
+
+Paste your forked repository URL here:
+
+`__________________________`
 ---
 
 # Completion Checklist
@@ -105,6 +110,7 @@ Paste your forked repository URL here:
 - [ ] `/tf-plan` executed and output analyzed by Claude
 - [ ] All required screenshots added
 - [ ] GitHub repository URL included
+- [ ] LinkedIn post URL included
 
 ---
 
