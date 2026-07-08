@@ -20,7 +20,7 @@ Create the required `.claude/skills/` directory structure for all skills.
 
 #### Screenshot 1 — Skills folder structure in VS Code
 
-Add your screenshot here.
+![Screenshot 1](screenshots/assign-3-task-1-ss-1.png)
 
 ---
 
@@ -34,13 +34,13 @@ Place all required skill files into their correct directories and verify their c
 
 #### Screenshot 2 — scaffold-terraform skill folder contents
 
-Add your screenshot here.
+![Screenshot 2](screenshots/assign-3-task-2-ss-2.png)
 
 ---
 
 #### Screenshot 3 — tf-plan/SKILL.md showing allowed-tools restrictions
 
-Add your screenshot here.
+![Screenshot 3](screenshots/assign-3-task-2-ss-3.png)
 
 ---
 
@@ -54,13 +54,13 @@ Execute the `/scaffold-terraform` skill to generate a full Terraform infrastruct
 
 #### Screenshot 4 — Claude scaffold execution result
 
-Add your screenshot here.
+![Screenshot 4](screenshots/assign-3-task-3-ss-4.png)
 
 ---
 
 #### Screenshot 5 — Generated terraform/ folder with all files
 
-Add your screenshot here.
+![Screenshot 5](screenshots/assign-3-task-3-ss-5.png)
 
 ---
 
@@ -74,7 +74,7 @@ Initialize Terraform and execute the `/tf-plan` skill to observe plan execution 
 
 #### Screenshot 6 — /tf-plan execution and Claude analysis output
 
-Add your screenshot here.
+![Screenshot 6](screenshots/assign-3-task-4-ss-6.png)
 
 ---
 

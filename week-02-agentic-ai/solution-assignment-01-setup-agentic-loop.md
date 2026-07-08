@@ -20,13 +20,13 @@ Install the Claude Code CLI globally and authenticate it using your Anthropic ac
 
 #### Screenshot 1 — Claude Code version check
 
-Add your screenshot here.
+![Screenshot 1](screenshots/assign-1-task-1-ss-1.png)
 
 ---
 
 #### Screenshot 2 — Claude Code authenticated in terminal
 
-Add your screenshot here.
+![Screenshot 1](screenshots/assign-1-task-1-ss-2.png)
 
 ---
 
@@ -40,7 +40,7 @@ Fork the provided GitHub repository, clone it to your local machine, and open it
 
 #### Screenshot 3 — Project opened in VS Code
 
-Add your screenshot here.
+![Screenshot 1](screenshots/assign-1-task-2-ss-3.png)
 
 ---
 
@@ -54,13 +54,13 @@ Interact with Claude Code and observe how it performs the Agentic Loop (Gather �
 
 #### Screenshot 4 — Claude reading project files and responding
 
-Add your screenshot here.
+![Screenshot 1](screenshots/assign-1-task-3-ss-4.png)
 
 ---
 
 #### Screenshot 5 — Claude executing command to count CSS lines
 
-Add your screenshot here.
+![Screenshot 1](screenshots/assign-1-task-3-ss-5.png)
 
 ---
 
