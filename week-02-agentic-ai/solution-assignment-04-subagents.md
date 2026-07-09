@@ -18,9 +18,9 @@ Create the `.claude/agents/` directory and add all required agent files.
 
 ### Evidence
 
-#### Screenshot 1 — VS Code sidebar showing `.claude/agents/` with all 3 files
+#### Screenshot 1 — Agents folder structure in VS Code
 
-Add your screenshot here.
+![Screenshot 1](screenshots/assign-1-task-1-ss-1.png)
 
 ---
 
@@ -34,34 +34,33 @@ Analyze the configuration differences between the three agents and demonstrate u
 
 #### 1. Why does the cost optimizer use Haiku instead of Sonnet?
 
-Add your answer here...
+Cost optimization checks do not require deep architectural or policy reasoning; they only need to scan resources, match patterns, and compare baseline settings like pricing classes and storage tiers. Using Claude Haiku handles these simple checks perfectly while maximizing execution speed and stopping you from overpaying for expensive compute.
 
 ---
 
 #### 2. Why does the security auditor NOT have Write in its tools list?
 
-Add your answer here...
+Following the principle of least privilege, a security audit should only inspect infrastructure, never modify it. Restricting the security auditor to read-only tools (read, grep, glob) eliminates the risk of an AI worker accidentally altering or introducing bugs into your live codebase during a routine review.
 
 ---
 
 #### 3. Why does the tf-writer use `inherit` instead of a specific model?
 
-Add your answer here...
+Code generation quality heavily depends on the reasoning depth of the underlying model, meaning complex infrastructure updates require maximum intelligence. Setting the model to inherit provides the flexibility for the sub-agent to automatically scale up to the level of whatever model (such as Claude Opus or Sonnet) you are currently running in your main active session.
 
 ---
 
 ### Evidence
 
-#### Screenshot 2 — `security-auditor.md` frontmatter showing model and tools configuration
+#### Screenshot 2 — security-auditor.md frontmatter
 
-Add your screenshot here.
+![Screenshot 2](screenshots/assign-4-task-2-ss-2.png)
 
 ---
 
-#### Screenshot 3 — `cost-optimizer.md` frontmatter showing the model and tools configuration
+#### Screenshot 3 — cost-optimizer.md frontmatter
 
-Add your screenshot here.
-
+![Screenshot 3](screenshots/assign-4-task-2-ss-3.png)
 ---
 
 # Task 3 — Run the Security Auditor
@@ -72,15 +71,15 @@ Trigger the security auditor agent and analyze the generated security report for
 
 ### Evidence
 
-#### Screenshot 4 — The delegation message showing Claude launched the security-auditor
+#### Screenshot 4 — Security auditor delegation triggered
 
-Add your screenshot here.
+![Screenshot 4](screenshots/assign-4-task-3-ss-4.png)
 
 ---
 
 #### Screenshot 5 — Security audit report output
 
-Add your screenshot here.
+![Screenshot 5](screenshots/assign-4-task-3-ss-5.png)
 
 ---
 
@@ -92,17 +91,26 @@ Trigger the cost optimizer agent and review the generated cost optimization repo
 
 ### Evidence
 
-#### Screenshot 6 — The full cost optimization report
+#### Screenshot 6 — Cost optimization report output
 
-Add your screenshot here.
+![Screenshot 6](screenshots/assign-4-task-4-ss-6.png)
 
 ---
 
 # Submission Instructions
 
 - Ensure all agent files are committed in `.claude/agents/`
-- Complete all written answers in your GitHub Repo
+- Complete all written answers in your Google Doc submission
 - Push final changes to your forked GitHub repository
+- Submit only the Google Doc link as required
+
+---
+
+## Google Doc Link
+
+Paste your Google Doc URL here:
+
+[Google Doc Link](https://docs.google.com/document/d/1R3rBXrucIv_pnvvul-7YZEqA9wc0BfvM6jzU16ubHIc/edit?usp=sharing/)
 
 ---
 
@@ -110,7 +118,7 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-`__________________________`
+[GitHub Repository](https://github.com/GodLoN/Ultimate-Agentic-DevOps-with-Claude-Code.git)
 
 ---
 
@@ -119,7 +127,7 @@ Paste your forked repository URL here:
 - [ ] `.claude/agents/` folder contains all 3 agent files
 - [ ] Screenshot 2 shows correct `security-auditor.md` configuration
 - [ ] Screenshot 3 shows correct `cost-optimizer.md` configuration
-- [ ] All 3 written answers completed 
+- [ ] All 3 written answers completed in Google Doc
 - [ ] Security auditor executed successfully
 - [ ] Cost optimizer executed successfully
 - [ ] Security report is visible with findings

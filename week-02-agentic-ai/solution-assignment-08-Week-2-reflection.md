@@ -46,7 +46,7 @@ You can publish your blog on:
 
 #### Screenshot 1 — Blog published and visible
 
-Add your screenshot here.
+![LinkedIn Post Confirmation](./screenshots/assign-8-ss-1.png)
 
 ---
 
@@ -54,7 +54,7 @@ Add your screenshot here.
 
 Blog Link:
 
-`__________________________________________`
+[Blog Post Link](https://medium.com/@godlonwhitegtr28/reflection-week-2-7b1bbb363172?sharedUserId=godlonwhitegtr28)
 
 ---
 
@@ -92,7 +92,7 @@ P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by 
 
 #### Screenshot 2 — LinkedIn post published
 
-Add your screenshot here.
+![LinkedIn Post Confirmation](./screenshots/assign-8-linkedIn-post.png)
 
 ---
 
@@ -101,14 +101,33 @@ Add your screenshot here.
 LinkedIn Post Content (copy-paste here):
 
 ```
-Paste your LinkedIn post content here
+Moving past conversational AI and diving straight into the mechanics of agentic workflows! 🚀
+
+I've just wrapped up Week 2 of the DevOps Micro Internship with Agentic AI, and it’s completely shifting how I approach automation, cloud architecture, and infrastructure management. 
+
+This week was all about moving away from basic prompting and building robust, automated engineering workflows using Claude Code, Model Context Protocol (MCP), custom skills, and lifecycle hooks. 
+
+Key takeaways from my lab work this week:
+🔹 Operational Anchors: Leveraging `CLAUDE.md` to dictate strict project state, conventions, and operational guideposts for autonomous agents.
+🔹 Modular Delegation: Utilizing subagents and tailored skill systems (like `/scaffold-terraform`) to break down complex architectural deployments into predictable, micro-tasks.
+🔹 Deterministic Security: Engineering custom hooks and restricting tool access (such as enforcing read-only permissions on execution plans) to ensure automated workflows remain safe and controlled.
+
+The future of DevOps isn't just about writing automation scripts; it's about engineering the guardrails, memory, and contexts that allow Agentic AI to execute safely at scale. 
+
+On to Week 3! 👨‍💻🌐
+
+P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by Pravin Mishra. You can start your DevOps journey by joining this Discord community ( https://lnkd.in/d4aftPyw ).
+
+
+
+#DMIByPravinMishra #AgenticAI #ClaudeCode #DevOps #LearningInPublic #CloudEngineering #Terraform
 ```
 
 ---
 
 ### LinkedIn Post Link:
 
-`__________________________________________`
+[LinkedIn Post Link](https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-agenticai-claudecode-share-7480945620564885505-mcXr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM/)
 
 ---
 

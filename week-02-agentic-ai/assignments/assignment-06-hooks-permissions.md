@@ -52,7 +52,8 @@ On real infrastructure teams, no engineer gives AI unrestricted access to produc
 
 - Assignment 3 completed (skills in place)
 - Assignment 4 completed (agents in place)
-- `jq` installed and available in PATH
+- `jq` installed and available in PATHchoco install jq
+
 
 ---
 

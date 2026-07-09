@@ -34,7 +34,7 @@ Generate an initial `CLAUDE.md` file using the `/init` command and review the au
 
 #### Screenshot 2 — The auto-generated CLAUDE.md open in VS Code showing its content
 
-![Screenshot 1](screenshots/assign-2-task-2-ss-2.png)
+![Screenshot 2](screenshots/assign-2-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Update the generated `CLAUDE.md` file by adding project-specific instructions ac
 
 #### Screenshot 3 — Your customized CLAUDE.md in VS Code showing all 5 sections (scroll to show the full file)
 
-![Screenshot 1](screenshots/assign-2-task-3-ss-3.png)
+![Screenshot 3](screenshots/assign-2-task-3-ss-3.png)
 
 ---
 
@@ -62,13 +62,13 @@ Verify that Claude’s behavior changes after adding `CLAUDE.md` by running a ne
 
 #### Screenshot 4 — Claude's specific, detailed answer after reading CLAUDE.md (Claude mentioning S3, CloudFront and Terraform)
 
-![Screenshot 1](screenshots/assign-2-task-4-ss-4.png)
+![Screenshot 4](screenshots/assign-2-task-4-ss-4.png)
 
 ---
 
 #### Screenshot 5 — Claude refusing or warning against adding React because of the "No JavaScript" convention defined in CLAUDE.md
 
-Add your screenshot here.
+![Screenshot 5](screenshots/assign-2-task-4-ss-5.png)
 
 ---
 
@@ -82,7 +82,7 @@ Commit the `CLAUDE.md` file and push it to your GitHub fork so the project instr
 
 #### Screenshot 6 — `CLAUDE.md` visible in your GitHub repository after pushing the commit
 
-![Screenshot 1](screenshots/assign-2-task-4-ss-5.png)
+![Screenshot 6](screenshots/assign-2-task-5-ss-6.png)
 
 ---
 
@@ -98,7 +98,7 @@ Commit the `CLAUDE.md` file and push it to your GitHub fork so the project instr
 
 Paste your forked repository URL here:
 
-`__________________________`
+`https://github.com/GodLoN/Ultimate-Agentic-DevOps-with-Claude-Code.git`
 
 ---
 

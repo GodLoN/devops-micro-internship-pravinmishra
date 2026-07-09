@@ -90,13 +90,14 @@ Initialize Terraform and execute the `/tf-plan` skill to observe plan execution 
 
 Paste your forked repository URL here:
 
-`__________________________`
+`https://github.com/GodLoN/Ultimate-Agentic-DevOps-with-Claude-Code.git`
 
 ## LinkedIn post URL
 
-Paste your forked repository URL here:
+Paste your LinkedIn Post URL here:
 
-`__________________________`
+`https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-agenticai-claudecode-activity-7480985196809498624-qe0h?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
+
 ---
 
 # Completion Checklist
