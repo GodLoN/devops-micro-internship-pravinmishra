@@ -73,8 +73,8 @@ Week 00 → Internet & Networking Basics
 Week 01 → Success Mindset
 [![Week 01 – Mindset](./badges/week-01.svg)](./week-01-success-mindset/)
 
-<!-- Week 02 → Agentic AI with Claude Code -->
-<!-- [![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/) -->
+Week 02 → Agentic AI with Claude Code
+[![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/)
 
 <!-- Week 03 → Linux for DevOps -->
 <!-- [![Week 03 – Linux](./badges/week-03.svg)](./week-03-linux-for-devops/) -->
@@ -135,7 +135,7 @@ Week 01 → Success Mindset
 |------|-------|--------|------------|---------------|-----------|
 | 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | — | — |
 | 01 | Success Mindset | ✅ Completed | ✅ Solved | [LinkedIn Post](https://www.linkedin.com/posts/godwin-obi-008a12177_from-cloud-administration-to-system-architect-share-7478428978115153921-QxLZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM/) | [Medium Blog](https://medium.com/@godlonwhitegtr28/from-cloud-administration-to-system-architect-re-engineering-enterprise-production-pipelines-a7a8bc37a9bc/) |
-| 02 | Agentic AI with Claude Code | ⬜ Not Started | ⏳ Pending | — | — |
+| 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | [LinkedIn Post](https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-agenticai-claudecode-share-7480945620564885505-mcXr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM/) | [Medium Blog](https://medium.com/@godlonwhitegtr28/reflection-week-2-7b1bbb363172?sharedUserId=godlonwhitegtr28) |
 | 03 | Linux for DevOps | ⬜ Not Started | ⏳ Pending | — | — |
 | 04 | Bash Scripting | ⬜ Not Started | ⏳ Pending | — | — |
 | 05 | Git & GitHub | ⬜ Not Started | ⏳ Pending | — | — |
