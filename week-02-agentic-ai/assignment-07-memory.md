@@ -91,7 +91,7 @@ Run three tests that prove Claude remembers what you told it — without you say
 
 Paste your Linkedin post link here:
 
-`__________________________`
+`Add your URL here`
 
 ---
 
@@ -99,7 +99,11 @@ Paste your Linkedin post link here:
 
 Paste your forked repository URL here:
 
+<<<<<<< HEAD
 `https://github.com/GodLoN/Ultimate-Agentic-DevOps-with-Claude-Code.git`
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 

@@ -118,7 +118,11 @@ Paste your Google Doc URL here:
 
 Paste your forked repository URL here:
 
+<<<<<<< HEAD
 [GitHub Repository](https://github.com/GodLoN/Ultimate-Agentic-DevOps-with-Claude-Code.git)
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 

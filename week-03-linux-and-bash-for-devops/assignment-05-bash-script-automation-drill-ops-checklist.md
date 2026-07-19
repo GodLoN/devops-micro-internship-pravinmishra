@@ -444,7 +444,11 @@ This script acts as a cohesive orchestrator of all the core scripting concepts l
 
 Paste your LinkedIn post URL here:
 
+<<<<<<< HEAD
 `https://www.linkedin.com/posts/godwin-obi-008a12177_devops-linux-bashscripting-activity-7483088084256047104-gbND?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 

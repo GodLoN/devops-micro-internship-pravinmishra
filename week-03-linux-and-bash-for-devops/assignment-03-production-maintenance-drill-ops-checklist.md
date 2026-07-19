@@ -444,7 +444,11 @@ Answer the following in your own words:
 
 Paste your LinkedIn post URL here:
 
+<<<<<<< HEAD
 `https://www.linkedin.com/posts/godwin-obi-008a12177_devops-sre-nginx-activity-7482516236061347841-jmFh?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 
