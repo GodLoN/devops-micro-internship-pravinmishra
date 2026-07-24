@@ -541,11 +541,7 @@ This incident response pipeline followed the standard four-step agentic cycle:
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD
 `https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-linux-bash-activity-7483553659922923521-2EpI?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
-=======
-`Add your URL here`
->>>>>>> upstream/main
 
 ---
 
@@ -559,11 +555,7 @@ Paste your LinkedIn post URL here:
 
 Paste the URL of your GitHub folder or repository containing the assignment files here:
 
-<<<<<<< HEAD
 `https://github.com/GodLoN/devops-micro-internship-pravinmishra.git`
-=======
-`Add your URL here`
->>>>>>> upstream/main
 
 ---
 

@@ -20,13 +20,13 @@ Create a `CodeTrack` project folder and initialize it as a Git repository.
 
 #### Screenshot 1 — Output of `git init` inside `CodeTrack` showing "Initialized empty Git repository"
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-4-assign-1-task-1-ss-1.png)
 
 ---
 
 #### Screenshot 2 — Output of `ls -a` showing the `.git` folder
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-4-assign-1-task-1-ss-2.png)
 
 ---
 
@@ -34,7 +34,17 @@ Add your screenshot here.
 
 **1. What is the `.git` folder, and why does it matter?**
 
-Add your answer here.
+The .git folder is a hidden directory automatically created when you run the git init command. It is the absolute core of any Git repository because it acts as a specialized internal database that stores all the metadata, configuration details, and the full history of changes made to your project files over time.
+
+It matters for several critical reasons:
+
+* **Enables Version Tracking:** Without this folder, your project directory remains a standard operating system folder. The .git folder is what tells Git to actively track modifications, additions, and deletions.
+
+* **Preserves Commit History:** Every time a change is recorded, the folder logs who made the commit, when it occurred, and exactly what modifications were made. This data allows you to safely roll back or switch to earlier versions of your code whenever necessary.
+
+* **Manages Configurations & Branches:** It holds local configuration details (like repository-specific usernames and email addresses) and manages branches, allowing developers to experiment on different features independently without affecting the primary application code.
+
+* **Operates Locally:** Because this database lives completely inside your local workspace, you can perform full version control operations, view history, and commit changes entirely offline without needing an active internet connection.
 
 ---
 
@@ -48,7 +58,7 @@ Set your Git username and email for the `CodeTrack` repository only, using `git 
 
 #### Screenshot 3 — Output of `git config --local --list` showing your `user.name` and `user.email`
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-4-assign-1-task-2-ss-3.png)
 
 ---
 
@@ -62,7 +72,7 @@ Set a global Git username and email for this machine using `git config --global`
 
 #### Screenshot 4 — Output of `git config --global --list` showing your `user.name` and `user.email`
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-4-assign-1-task-3-ss-4.png)
 
 ---
 

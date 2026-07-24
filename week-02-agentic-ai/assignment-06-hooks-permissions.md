@@ -168,7 +168,6 @@ Prove the logging hook runs after a successful command execution and records Ter
 
 Complete all tasks in sequence.
 
-<<<<<<< HEAD
 ---
 
 ## GitHub Repository URL
@@ -176,10 +175,6 @@ Complete all tasks in sequence.
 Paste your forked repository URL here:
 
 `https://github.com/GodLoN/Ultimate-Agentic-DevOps-with-Claude-Code.git`
-=======
-Your submission must include:
-- All 9 required screenshots
->>>>>>> upstream/main
 
 ---
 

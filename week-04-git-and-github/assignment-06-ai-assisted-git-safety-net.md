@@ -44,7 +44,7 @@ Stage it with `git add`.
 
 #### Screenshot 1 — `git status` showing the staged file on your new branch
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-4-assign-6-task-1-ss-1.png)
 
 ---
 
@@ -52,7 +52,7 @@ Add your screenshot here.
 
 **1. Why does this assignment use an obviously fake key instead of a real one?**
 
-Add your answer here.
+Committing real credentials to Git history—even briefly or on private branches—exposes them to severe security risks, automated scraping, and immediate credential compromise. Using an obviously fake key (such as AKIAABCDEFGHIJKLMNOP) safely simulates a secret detection pattern during local testing without risking leakages, account takeovers, or cloud infrastructure compromise.
 
 ---
 
@@ -103,13 +103,13 @@ git config core.hooksPath hooks
 
 #### Screenshot 2 — `hooks/pre-commit` open in VS Code showing the full script
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-4-assign-6-task-2-ss-2.png)
 
 ---
 
 #### Screenshot 3 — Output of `git config core.hooksPath` confirming it points to `hooks`
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-4-assign-6-task-2-ss-3.png)
 
 ---
 
@@ -117,13 +117,17 @@ Add your screenshot here.
 
 **1. Why is `hooks/pre-commit` tracked in the repo instead of living only in `.git/hooks/`?**
 
-Add your answer here.
+Files inside the local .git/ folder are ignored by version control and cannot be pushed to remote repositories. By tracking hooks/pre-commit directly in the repository directory and referencing it via git config core.hooksPath hooks, the pre-commit checks become part of the codebase. This ensures that every team member who clones the repository automatically inherits and enforces the exact same security gates and quality standards.
 
 ---
 
 **2. Compare this to `PreToolUse` from Week 2 Assignment 6. What does each one intercept, and what do they have in common?**
 
-Add your answer here.
+* PreToolUse intercepts agentic AI actions before an AI tool executes a potentially dangerous shell command or file edit.
+
+* Git Pre-Commit Hook intercepts local developer actions right before Git creates a commit snapshot in version control.
+
+* Commonality: Both serve as deterministic "safety rails" (gatekeepers) that evaluate input parameters against predefined security rules and abort the operation prior to execution if a policy violation occurs.
 
 ---
 
@@ -137,7 +141,7 @@ Attempt to commit the staged file from Task 1 and show the hook rejecting it.
 
 #### Screenshot 4 — Terminal showing `git commit` rejected with the hook's "BLOCKED" message naming the exact file
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-4-assign-6-task-3-ss-4.png)
 
 ---
 
@@ -145,14 +149,15 @@ Add your screenshot here.
 
 **1. Which line in `hooks/pre-commit` matched your fake key, and why did it match?**
 
-Add your answer here.
+The line that matched was:
+if git diff --cached -- "$file" | grep -qE 'AKIA[0-9A-Z]{16}|-----BEGIN (RSA|OPENSSH|PRIVATE) KEY-----'; then
+It matched because the regex pattern AKIA[0-9A-Z]{16} specifically looks for the standard 20-character AWS Access Key structure starting with the prefix AKIA followed by 16 uppercase alphanumeric characters.
 
 ---
 
 **2. Could this hook have caught a poorly-named variable that stores a secret without the `AKIA` prefix? What does that tell you about the limits of a fixed rule like this?**
 
-Add your answer here.
-
+No, it would not have caught it unless the secret matched an exact hardcoded regex pattern in the script. This highlights the fundamental limitation of fixed-rule pattern matching: deterministic rules are rigid and can only catch known patterns. They miss obfuscated credentials, custom secret naming conventions, or context-specific risks that fall outside their exact regex definitions.
 ---
 
 # Task 4 — Build the `/pr-ready` Skill
@@ -192,13 +197,13 @@ Run it with `/pr-ready`.
 
 #### Screenshot 5 — `SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no `Write`) and `disable-model-invocation: true`
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-4-assign-6-task-4-ss-5.png)
 
 ---
 
 #### Screenshot 6 — `/pr-ready` output while the risky file is still staged, showing it flagged the secret and/or debug statement
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-4-assign-6-task-4-ss-6.png)
 
 ---
 
@@ -206,13 +211,15 @@ Add your screenshot here.
 
 **1. Why does `/pr-ready` have `Bash` and `Read` but not `Write`?**
 
-Add your answer here.
+The /pr-ready skill is designed strictly for inspection, risk analysis, and drafting documentation. Excluding the Write tool guarantees that the AI remains read-only, preventing it from silently modifying code files, staging unauthorized changes, or bypassing human oversight during pre-PR evaluation.
 
 ---
 
 **2. The pre-commit hook and `/pr-ready` both looked at the same staged diff. Did they flag the same things? What did one catch that the other didn't?**
 
-Add your answer here.
+* **Pre-Commit Hook (Fixed Rule):** Flagged the AKIA key pattern because it matched its hardcoded regex, but it ignored the left*over echo "DEBUG: ..." statement because no rule was written to block echo.
+
+* **/pr-ready Skill (AI Review):** Flagged both the credential-shaped string and the leftover DEBUG print statement. The AI recognized the contextual noise of leftover debug code, demonstrating how semantic AI evaluation catches qualitative code quality issues that rigid rules miss.
 
 ---
 
@@ -226,13 +233,13 @@ Remove the secret and debug statement, then prove both gates now pass clean.
 
 #### Screenshot 7 — `git commit` succeeding after the fix (no BLOCKED message)
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-4-assign-6-task-5-ss-7.png)
 
 ---
 
 #### Screenshot 8 — Second `/pr-ready` run showing a clean risk report and a drafted PR title + description
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-4-assign-6-task-5-ss-8.png)
 
 ---
 
@@ -240,7 +247,7 @@ Add your screenshot here.
 
 **1. What exactly did you change to satisfy the pre-commit hook?**
 
-Add your answer here.
+I edited scripts/notify.sh to remove the hardcoded credential variable (AWS_ACCESS_KEY_ID=AKIAABCDEFGHIJKLMNOP) and deleted the leftover echo "DEBUG..." statement. After saving and re-staging the clean file (git add scripts/notify.sh), the staged diff no longer contained any patterns matching the hook's regex, allowing git commit to execute cleanly.
 
 ---
 
@@ -256,13 +263,13 @@ Push your branch and open a real Pull Request, using `/pr-ready`'s drafted title
 
 #### Screenshot 9 — Your Pull Request showing the base repository is your own fork, plus the title and description, with the `/pr-ready` draft visible for comparison (paste it in the PR conversation or your notes below)
 
-Add your screenshot here.
+![Screenshot 9](screenshots/week-4-assign-6-task-6-ss-9.png)
 
 ---
 
 #### PR Link
 
-Add your PR URL here...
+'https://github.com/GodLoN/devops-micro-internship-pravinmishra/pull/1'
 
 ---
 
@@ -270,20 +277,19 @@ Add your PR URL here...
 
 **1. What, if anything, did you edit in the AI's drafted PR description before using it? Why?**
 
-Add your answer here.
+I did not edit the draft provided by /pr-ready and used it word-for-word. The draft generated by the skill (docs: Complete week 04 git and GitHub assignments...) already accurately summarized the scope of my changes, covered the exact completion steps, and provided a clear explanation without hallucinating unperformed tasks or missing key context.
 
 ---
 
 **2. If you had blindly copy-pasted the AI's draft without reading it, what could go wrong?**
 
-Add your answer here.
+If an AI draft contains inaccuracies or hallucinations and is blindly copy-pasted, it can mislead reviewers about what actually changed in the diff, claim that tests or features were added when they weren't, or obscure critical breaking changes. In a real engineering team, this creates confusion during code reviews and pollutes the repository's audit history.
 
 ---
 
 **3. Why does this PR need to target your own fork instead of the shared upstream repository?**
 
-Add your answer here.
-
+This PR includes local practice scripts (scripts/notify.sh), pre-commit hooks, and custom AI skills (.claude/skills/pr-ready/SKILL.md) specific to this assignment. Targetting the shared upstream repository (pravinmishraaws) with these personal training artifacts would pollute the central repository with non-upstream code, whereas targeting my own fork keeps my practice work isolated and cleanly documented.
 ---
 
 # Task 7 — Map the Workflow to the Agentic Loop
@@ -296,31 +302,31 @@ Explain this assignment's workflow using the same Gather → Analyze → Human A
 
 **1. Which step(s) represent Gather?**
 
-Add your answer here.
+* Running git diff --cached, git status, and checking file sizes via git cat-file to extract the staged metadata.
 
 ---
 
 **2. Which step(s) represent Analyze?**
 
-Add your answer here.
+* The pre-commit hook scanning staged text against regex/size rules, and the /pr-ready skill evaluating code context, searching for debug logs, and drafting the PR report.
 
 ---
 
 **3. Which step is Human Act, and why must a human — not Claude — run `git commit`, `git push`, and open the PR?**
 
-Add your answer here.
+The Human Act step occurs when the engineer manually executes git commit, git push, and clicks "Create Pull Request". A human must run these because critical state changes in a shared codebase require human accountability, verification, and decision-making—AI should advise, but never take write/deploy actions autonomously.
 
 ---
 
 **4. Which step is Verify?**
 
-Add your answer here.
+Running the pre-commit hook again upon committing, re-running /pr-ready to confirm a clean risk report, and reviewing the target branch on GitHub before submitting.
 
 ---
 
 **5. In one or two sentences: why do you need *both* the fixed-rule pre-commit hook and the AI skill? Isn't one enough?**
 
-Add your answer here.
+You need both because fixed-rule hooks provide fast, non-negotiable security gates for known risks (like hardcoded keys or large files), while AI skills provide contextual judgment for qualitative issues (like debug clutter or poor PR descriptions). Together, deterministic rules handle security while AI enhances code quality and human context.
 
 ---
 
@@ -334,7 +340,7 @@ Publish a LinkedIn post summarizing what you built and what you learned about co
 
 #### LinkedIn Post URL
 
-Add your LinkedIn post URL here...
+'https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-git-github-share-7486207670488662017-_TLL/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM'
 
 ---
 
@@ -342,9 +348,15 @@ Add your LinkedIn post URL here...
 
 Add 3-5 bullet points on what you learned this week.
 
--
--
--
+* **Dual-Layer Git Security:** Learned how to combine fast, deterministic rules (Bash pre-commit hooks) for non-negotiable security gates with Agentic AI skills (/pr-ready) for qualitative, contextual code reviews.
+
+* **Tracked Repository Hooks:** Discovered how to move local Git hooks out of .git/hooks/ and track them in the main repository directory using git config core.hooksPath hooks, ensuring automated security gates are enforced across the entire team.
+
+* **Principle of Least Privilege for AI:** Built a restricted Claude Code skill configured with allowed-tools: Bash, Read, Grep (excluding Write), proving that AI assistants should be given read-only access when performing inspection and drafting tasks.
+
+* **Deterministic Rules vs. Contextual AI:** Experienced firsthand why regex pattern matching catches explicit secrets (AKIA...) in milliseconds, while AI review excels at detecting soft issues like leftover debug statements (echo "DEBUG..."), missing documentation, or scope creep.
+
+* **The Agentic Loop in Practice:** Mastered the Gather → Analyze → Human Act → Verify pattern, reinforcing that AI should gather facts and draft recommendations, but human engineers must always review, approve, and execute critical Git state changes (commit, push, and PR creation).
 
 ---
 
@@ -364,7 +376,7 @@ Add 3-5 bullet points on what you learned this week.
 
 Paste your forked repository URL here:
 
-`Add your URL here`
+`https://github.com/GodLoN/devops-micro-internship-pravinmishra.git`
 
 ---
 

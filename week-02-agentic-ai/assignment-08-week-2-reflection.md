@@ -54,11 +54,7 @@ You can publish your blog on:
 
 Blog Link:
 
-<<<<<<< HEAD
-[Blog Post Link](https://medium.com/@godlonwhitegtr28/reflection-week-2-7b1bbb363172?sharedUserId=godlonwhitegtr28)
-=======
-`Add your URL here`
->>>>>>> upstream/main
+'https://medium.com/@godlonwhitegtr28/reflection-week-2-7b1bbb363172?sharedUserId=godlonwhitegtr28'
 
 ---
 
@@ -131,11 +127,7 @@ P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by 
 
 ### LinkedIn Post Link:
 
-<<<<<<< HEAD
-[LinkedIn Post Link](https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-agenticai-claudecode-share-7480945620564885505-mcXr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM/)
-=======
-`Add your URL here`
->>>>>>> upstream/main
+'https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-agenticai-claudecode-share-7480945620564885505-mcXr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM'
 
 ---
 

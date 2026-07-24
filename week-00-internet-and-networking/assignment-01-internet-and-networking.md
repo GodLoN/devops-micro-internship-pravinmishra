@@ -34,7 +34,7 @@ Replace `task-1-chatgpt.png` with your actual screenshot file name.
 
 ## What I Learned (2–3 lines)
 
-Add your answer here...
+From this task, I learned that a protocol is simply a set of rules that allows computers to communicate clearly with each other. Using a real-life example made it easier to understand how these rules help prevent confusion. I also learned that protocols are essential for smooth and organized communication in networking. 
 
 ---
 
@@ -59,7 +59,10 @@ Write a short explanation (**100–150 words**) that includes:
 
 ## Answer
 
-Add your answer here...
+When someone anywhere in the world visits the EpicReads website, their request travels across the internet using a system called packet switching. This means the request is broken into small pieces called packets, which travel through different routes and are reassembled at the destination. The website hosted in Finland has a unique IP address, which acts like a home address, telling the internet where EpicReads is located.
+
+Communication over the internet relies on TCP/IP, a set of rules that ensures data is sent correctly, arrives intact, and is reassembled in the right order. When a user types the website address into a browser, HTTP or HTTPS is used to request and display the web pages. HTTPS adds security by encrypting the data. Together, these technologies allow users worldwide to reliably and safely access EpicReads.
+
 
 ---
 
@@ -102,18 +105,18 @@ Replace `task-3-diagram.png` with your actual diagram file name.
 
 ### Frontend
 
-* Add your answer here...
-* Add your answer here...
+* HTML, CSS, JavaScript
+* React or Vue js
 
 ### Backend
 
-* Add your answer here...
-* Add your answer here...
+* Node Js
+* Python (Django/Flask)
 
 ### Database
 
-* Add your answer here...
-* Add your answer here...
+* MySQL
+* MongoDB
 
 ---
 
@@ -142,7 +145,10 @@ In **50–100 words**, explain in your own words:
 
 ## Answer
 
-Add your answer here...
+DNS (Domain Name System) is like the phonebook of the internet. It helps translate easy-to-remember domain names, such as epicreads.com, into IP addresses that computers use to find servers. Instead of users memorizing numbers, DNS allows them to access websites using names.
+
+To connect epicreads.com to the IP address 52.172.142.222, an A record should be used. An A record maps a domain name directly to an IPv4 address, making it the correct and simplest choice for pointing the domain to the server hosting the EpicReads website.
+
 
 ---
 
@@ -218,7 +224,7 @@ Add the following credit note at the end of your post:
 Paste your LinkedIn post URL here:
 
 ```text
-Add your URL here...
+https://www.linkedin.com/posts/godwin-obi-008a12177_join-the-dmi-devops-micro-internship-activity-7460786519759474688-_gIJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM
 ```
 
 ---
@@ -227,7 +233,29 @@ Add your URL here...
 
 Paste the full text of your LinkedIn post here:
 
-Add your post content here...
+🚀 My DevOps Learning Journey – Key Takeaways (Tasks 1–5)
+As I begin my journey into DevOps, I’ve been learning and documenting the fundamentals step by step. Here’s a quick summary of what I’ve covered so far:
+
+🤖 ChatGPT
+I learned how to use ChatGPT as a learning assistant by asking clear, beginner-friendly questions. It helps simplify complex DevOps and networking concepts using real-life examples, making learning faster and less intimidating.
+
+🌐 Internet & Networking
+I understood how users across the world can access a website using concepts like packet switching, IP addresses, TCP/IP, and HTTP/HTTPS. These technologies work together to ensure data is sent, received, and displayed correctly and securely.
+
+🧩 App Architecture
+I explored two-tier and three-tier application architectures. A two-tier app connects the frontend directly to the database, while a three-tier app introduces a backend layer to handle logic, security, and communication more efficiently.
+
+🌍 DNS
+I learned that DNS works like the internet’s phonebook, translating domain names into IP addresses. To connect a domain name to an IPv4 address, an A record is used because it directly maps the domain to the server’s IP.
+
+💻 VS Code Setup
+I installed Visual Studio Code, opened the integrated terminal, and ran basic commands. This helped me get comfortable with my development environment and understand how developers interact with their systems daily.
+
+📌 P.S. This post is part of the DevOps Micro Internship (DMI) Cohort 3 run by Pravin Mishra. You can be part of this learning community too. 
+JOIN HERE (https://discord.pravinmishra.com/ ) DMI Cohort 3: https://forms.gle/PSGTcWDSvpUJXYGN6
+Pravin Mishra Profile: https://www.linkedin.com/in/pravin-mishra-aws-trainer/
+#DevOps #LearningInPublic #NetworkingBasics #DNS #VSCode #BeginnerJourney #ContinuousLearning	
+
 
 ---
 
@@ -235,19 +263,19 @@ Add your post content here...
 
 ### What did you find easy?
 
-Add your answer here...
+Understanding the conceptual frameworks like DNS address mapping and the distinction between two-tier and three-tier application architectures. Relating networking protocols to real-life communication rules via ChatGPT made the underlying theory straightforward and easy to digest. Setting up Visual Studio Code and running basic terminal navigation commands was also very familiar and quick to complete.
 
 ---
 
 ### What was difficult?
 
-Add your answer here...
+Visualizing how lower-level networking layers—specifically packet switching and the TCP/IP handshake protocol—interact under the hood to ensure reliable data delivery across global infrastructure. Structuring the application architecture diagrams cleanly while mapping out the correct technology stack at each tier also required careful thought to ensure accuracy.
 
 ---
 
 ### What will you improve next week?
 
-Add your answer here...
+Next week, I will focus on practicing more hands-on command-line interface (CLI) operations directly inside the terminal to build better speed and muscle memory. I also plan to start exploring basic Git version control workflows earlier in the week so I can manage my assignment submissions and repository commits more efficiently.
 
 ---
 

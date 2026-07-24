@@ -149,9 +149,7 @@ Beyond engineering individual pipelines, Godwin transitioned into a definitive t
 
 ### Public Link
 
-[LinkedIn-Post-Assignment-3](https://www.linkedin.com/posts/godwin-obi-008a12177_from-cloud-administration-to-system-architect-share-7478428978115153921-QxLZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM/)
-
-`Add your URL here`
+'https://www.linkedin.com/posts/godwin-obi-008a12177_from-cloud-administration-to-system-architect-share-7478428978115153921-QxLZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM'
 
 ---
 
@@ -383,16 +381,15 @@ I will execute an uninterrupted 90-minute engineering focus block every single M
 
 ### LinkedIn Post
 
-[LinkedIn-Post-Assignment-6](https://www.linkedin.com/posts/godwin-obi-008a12177_devops-systemsthinking-continuousimprovement-share-7478460294344884225-IItw/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM/)
+https://www.linkedin.com/posts/godwin-obi-008a12177_devops-systemsthinking-continuousimprovement-share-7478460294344884225-IItw/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM/
 
-`Add your URL here`
 
 ---
 
 ## 10. Proof of Work
 
-- LinkedIn Post URL: **[LinkedIn Post](https://www.linkedin.com/posts/godwin-obi-008a12177_from-cloud-administration-to-system-architect-share-7478428978115153921-QxLZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM/)**  
-- Blog / Medium : **[Medium Blog](https://medium.com/@godlonwhitegtr28/from-cloud-administration-to-system-architect-re-engineering-enterprise-production-pipelines-a7a8bc37a9bc/)**  
+- LinkedIn Post URL: **https://www.linkedin.com/posts/godwin-obi-008a12177_from-cloud-administration-to-system-architect-share-7478428978115153921-QxLZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM**  
+- Blog / Medium : **https://medium.com/@godlonwhitegtr28/from-cloud-administration-to-system-architect-re-engineering-enterprise-production-pipelines-a7a8bc37a9bc**  
 
 ---
 
