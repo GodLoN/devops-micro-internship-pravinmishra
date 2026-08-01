@@ -49,7 +49,7 @@ This is not a course. It is an internship-style program — real deployments, re
 
 <!-- Add your cohort leaderboard rank here as you progress -->
 
-> 🥇 Cohort 3 Rank: **#5** <!-- Update this each week -->
+> 🥇 Cohort 3 Rank: **#80** <!-- Update this each week -->
 
 ---
 
