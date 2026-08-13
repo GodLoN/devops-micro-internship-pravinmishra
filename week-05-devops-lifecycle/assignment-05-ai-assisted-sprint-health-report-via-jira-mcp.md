@@ -20,13 +20,13 @@ Generate an API token from your Atlassian account that the MCP server will use t
 
 #### Screenshot 1 — Jira API token creation confirmation page showing the token name, with the token value not visible
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-5-assign-5-task-1-ss-1.png)
 
 ### Notes You Must Write (Very Important):
 
 Why does the MCP server need your site URL and account email in addition to the token?
 
-Add your answer here
+Jira Cloud's REST API authenticates requests using Basic Authentication over HTTPS, which strictly requires combining the user's Atlassian account email address (the username) and the secret API token (the password). The API token proves identity, while the account email specifies which user profile holds the authorization permissions. Additionally, because Atlassian hosts thousands of distinct tenant instances, the Jira site URL is required to tell the MCP server which exact Jira instance and network endpoint to route the API calls to.
 
 ---
 
@@ -40,13 +40,13 @@ Create or update `.mcp.json` at your project root with a Jira MCP server block, 
 
 #### Screenshot 2 — `.mcp.json` open in VS Code showing the Jira server configuration
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-5-assign-5-task-2-ss-2.png)
 
 ### Notes You Must Write (Very Important):
 
 Compare this jira block to the github block from Week 2 Assignment 5. The GitHub server ran via npx (a Node.js package); this one runs via uvx (a Python package) — what stays exactly the same shape despite that difference, and why doesn't Claude Code care which language a given MCP server is written in?
 
-Add your answer here
+Despite the runtime difference (npx for Node.js vs uvx for Python), the exact JSON structure remains identical: both define a "command", an array of "args", and an "env" object. Claude Code does not care which programming language an MCP server is written in because MCP uses a standardized protocol abstraction layer communicating over standard input/output (stdin/stdout) via JSON-RPC. As long as the process initiated by the command speaks valid MCP JSON-RPC messages, Claude Code can interact with the server's tools seamlessly regardless of the underlying programming language.
 
 ---
 
@@ -60,13 +60,13 @@ Add your Jira site URL, account email, and API token to `.claude/settings.local.
 
 #### Screenshot 3 — `settings.local.json` open in VS Code showing the `env` section, with the actual token value blurred or covered
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-5-assign-5-task-3-ss-3.png)
 
 ### Notes You Must Write (Very Important):
 
 Why must JIRA_API_TOKEN live in settings.local.json and never in .mcp.json?
 
-Add your answer here
+The .mcp.json file defines server configurations and is intended to be committed to version control (such as GitHub) so the entire development team shares the same MCP setup. In contrast, JIRA_API_TOKEN is a sensitive security credential that grants access to your Atlassian account. Placing secrets in .mcp.json creates a critical risk of exposing credentials publicly or across repositories. By storing sensitive environment variables in settings.local.json and listing that file in .gitignore, credentials remain local to your machine while allowing safe repository collaboration.
 
 ---
 
@@ -80,7 +80,7 @@ Restart Claude Code and confirm the Jira MCP server shows as connected.
 
 #### Screenshot 4 — `/mcp` output showing `jira: connected`
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-5-assign-5-task-4-ss-4.png)
 
 ---
 
@@ -94,13 +94,20 @@ Ask Claude to list the issues in your current active sprint through the Jira MCP
 
 #### Screenshot 5 — Claude's response showing the live sprint issue list retrieved via Jira MCP
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-5-assign-5-task-5-ss-5.png)
 
 ### Notes You Must Write (Very Important):
 
 How did you confirm this was real board data and not something Claude guessed?
 
-Add your answer here
+I confirmed this was real board data using the following verification steps:
+
+1. Live MCP Server Query: The data was pulled directly from the Jira API via the Jira Model Context Protocol (mcp-atlassian / jira) integration rather than relying on standard AI text generation.
+
+2. Specific Entity Keys: The report references verified Jira issue keys (DMIWGO-16, DMIWGO-3, and DMIWGO-2) that match the specific project workspace (DMI-SPRINT-HEALTH).
+
+3. Exact Sprint Metadata: The active sprint parameters (Sprint 1 timeframe: August 8, 2026 – August 22, 2026, active status, story point distribution, and exact assignee name) reflect live state values fetched directly from the Jira board endpoint.
+
 
 ---
 
@@ -114,21 +121,25 @@ Create a `/sprint-health` skill restricted to read-only Jira tools plus `Read`, 
 
 #### Screenshot 6 — `SKILL.md` frontmatter showing `allowed-tools` limited to read-only Jira tools plus `Read`, with `disable-model-invocation: true`
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-5-assign-5-task-6-ss-6.png)
 
 #### Screenshot 7 — `/sprint-health` output showing the full triage report against your real sprint
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-5-assign-5-task-6-ss-7.png)
 
 ### Notes You Must Write (Very Important):
 
 1. Which Jira MCP tools does this skill's allowed-tools list include, and which mutating tools (create issue, update issue, transition issue, add comment) does it deliberately exclude?
 
-Add your answer here
+* **Included Tools:** The skill's allowed-tools list exclusively includes read-only Jira tools such as jira_get_all_sprints, jira_get_sprint_issues, jira_search_issues, jira_get_issue, and jira_get_project_details (along with the file system Read tool).
+
+* **Excluded Mutating Tools:** It deliberately excludes all state-changing or mutating tools, specifically jira_create_issue, jira_update_issue, jira_transition_issue, and jira_add_comment (as well as file system Write or Edit tools).
 
 2. Why does a Scrum Master need this restriction more than almost any other role in this course?
 
-Add your answer here
+* **Maintaining Role Boundaries & Team Trust:** A Scrum Master acts as a servant leader and facilitator whose primary responsibility is observing, reporting, and clearing blockers for the team—not modifying the backlog or forcing task states unilaterally.
+
+* **Preventing Unintended Board Alterations:** Restricting the /sprint-health tool to read-only guarantees that automated health checks and sprint audits cannot accidentally alter issue statuses, reassign tickets, or modify story points during live sprint monitoring.
 
 ---
 
@@ -142,13 +153,15 @@ Manually update one ticket on your board in the browser (for example, move a sto
 
 #### Screenshot 8 — Second `/sprint-health` run showing the report now reflects your manual board change
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-5-assign-5-task-7-ss-8.png)
 
 ### Notes You Must Write (Very Important):
 
 Map this assignment to Gather → Analyze → Human Act → Verify from Week 3 Assignment 6. Which step did you perform manually in the browser, and why must that step stay human?
 
-Add your answer here
+* **Accountability and Governance:** AI models can assess sprint risk and identify state changes through read-only tools, but actual state changes (such as closing a ticket, reassigning tasks, or altering story points) directly impact team accountability, velocity tracking, and project delivery deadlines.
+
+* **Context and Intent Validation:** A Scrum Master or engineer possesses real-world context—such as unblocked dependencies, verified code merges, or manual QA sign-offs—that an automated LLM skill cannot observe from board metadata alone. Keeping execution in human hands prevents accidental, invalid, or premature ticket transitions while maintaining human oversight over board integrity.
 
 ---
 

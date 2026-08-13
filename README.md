@@ -79,16 +79,11 @@ Week 02 → Agentic AI with Claude Code
 Week 03 → Linux & Bash for DevOps
 [![Week 03 – Linux & Bash](./badges/week-03.svg)](./week-03-linux-and-bash-for-devops/)
 
-<<<<<<< HEAD
 Week 04 → Git & GitHub
 [![Week 04 – Git](./badges/week-04.svg)](./week-04-github/)
-=======
-<!-- Week 04 → Git & GitHub -->
-<!-- [![Week 04 – Git](./badges/week-04.svg)](./week-04-git-and-github/) -->
->>>>>>> upstream/main
 
-<!-- Week 05 → DevOps Lifecycle & Agile -->
-<!-- [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) -->
+Week 05 → DevOps Lifecycle & Agile -->
+[![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/)
 
 <!-- Week 06 → AWS Cloud -->
 <!-- [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/) -->
@@ -138,10 +133,10 @@ Week 04 → Git & GitHub
 | 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_join-the-dmi-devops-micro-internship-activity-7460786519759474688-_gIJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/breaking-into-devops-demystifying-networking-dns-and-application-architecture-week-0-d04e0db6f15e?sharedUserId=godlonwhitegtr28 |
 | 01 | Success Mindset | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_from-cloud-administration-to-system-architect-share-7478428978115153921-QxLZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/from-cloud-administration-to-system-architect-re-engineering-enterprise-production-pipelines-a7a8bc37a9bc |
 | 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-agenticai-claudecode-share-7480945620564885505-mcXr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/reflection-week-2-7b1bbb363172?sharedUserId=godlonwhitegtr28 |
-| 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-linux-bash-activity-7483553659922923521-2EpI?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/738675f8c22d |
+| 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-linux-bash-activity-7483553659922923521-2EpI?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/bridging-linux-telemetry-agentic-ai-building-a-human-in-the-loop-incident-triage-system-738675f8c22d |
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-linux-bash-share-7484746152383438849-KPma/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/beyond-git-push-building-an-ai-assisted-safety-net-for-git-github-2769fecab7c6?sharedUserId=godlonwhitegtr28 |
-| 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
-| 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
+| 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_devops-agile-scrum-share-7493406325566074880-MVSX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/unlocking-read-only-ai-governance-in-agile-my-week-5-journey-with-jira-mcp-and-claude-code-c39b105bd46f |
+| 06 | AWS Cloud | 🔄 In Progress | ⏳ Pending | — | — |
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
@@ -168,12 +163,6 @@ Week 04 → Git & GitHub
 If you found this repo useful or want to follow my DevOps journey:
 
 - ⭐ Star this repo
-<<<<<<< HEAD
 - 🔗 Connect with me on [LinkedIn](https://www.linkedin.com/in/godwin-obi-008a12177/)
 - 🌐 Learn more about the program: https://dmi.pravinmishra.com
 - 💬 Join the community: https://discord.pravinmishra.com
-=======
-- 🔗 Connect with me on [LinkedIn](#)
-- 🌐 Learn more about the program: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme
-- 💬 Join the community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme
->>>>>>> upstream/main

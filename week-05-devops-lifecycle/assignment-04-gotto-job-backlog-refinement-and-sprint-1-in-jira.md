@@ -20,7 +20,7 @@ Choose Team Mode or Solo Mode, and document how each Scrum role (Product Owner, 
 
 #### Screenshot 1 — Jira "Create project" screen, or the project sidebar after creation
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-5-assign-4-task-1-ss-1.png)
 
 ---
 
@@ -28,7 +28,13 @@ Add your screenshot here.
 
 Write one line for each role: PO (what you prioritized), SM (how you ensured process), Dev Lead (what you built), DevOps Lead (how you shipped).
 
-Write your answer here.
+- Product Owner (PO): Prioritized high-impact, low-complexity UI discoverability stories (S1, S2, S5, S8) to maximize delivered user value in Sprint 1.
+
+- Scrum Master (SM): Ensured process compliance by enforcing standard sub-tasks (Build, Verify, Deploy, Screenshot) across all active sprint items and monitoring board status workflow.
+
+- Developer Lead (Dev): Built the hero tagline UI update ("Find your next role, fast.") and verified markup rendering across viewport configurations.
+
+- DevOps Lead (DevOps): Shipped the code increment via Git version control tracking to the live web application server endpoint.
 
 ---
 
@@ -42,7 +48,7 @@ Create a Team-managed Scrum project named `Gotto Job – Team <#>` (Team Mode) o
 
 #### Screenshot 2 — Project created page showing the project name and key
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-5-assign-4-task-2-ss-2.png)
 
 ---
 
@@ -56,7 +62,7 @@ Create the Epic `Improve Gotto Job UI discoverability & trust` to group the UI i
 
 #### Screenshot 3 — Backlog showing the Epic panel with the Epic visible
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-5-assign-4-task-3-ss-3.png)
 
 ---
 
@@ -70,13 +76,12 @@ Create at least six Stories under the Epic, estimate each with 1, 2, or 3 story 
 
 #### Screenshot 4 — Backlog showing the Epic and at least six Stories under it
 
-Add your screenshot here.
-
+![Screenshot 4](screenshots/week-5-assign-4-task-4-ss-4.png)
 ---
 
 #### Screenshot 5 — One Story opened showing its Story Points and acceptance criteria filled in
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-5-assign-4-task-4-ss-5.png)
 
 ---
 
@@ -90,7 +95,7 @@ Confirm the Story Points (1, 2, or 3) for each Story and record brief reasoning 
 
 #### Screenshot 6 — Backlog showing Story Points visible, or two or three Stories opened showing their points
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-5-assign-4-task-5-ss-6.png)
 
 ---
 
@@ -98,7 +103,24 @@ Add your screenshot here.
 
 For each story, explain in one or two lines why it is a 1, 2, or 3 (mention any debate, even in Solo Mode).
 
-Write your answer here.
+Story Point Estimation & Alignment Notes:
+- S1: Hero tagline clarity (1 Pt) — Minor string update in index.html; minimal effort and zero operational risk. Debated 2 pts briefly for responsiveness, but kept at 1 pt given simple text wrapping.
+
+- S2: Primary CTA color (1 Pt) — Global CSS color adjustment to #198754. Evaluated 2 pts due to site-wide impact, but settled on 1 pt as changes are isolated to styling classes.
+
+- S3: Job card typography (2 Pts) — Structural styling change requiring font-weight updates and multi-device viewport testing to prevent text truncation.
+
+- S4: Remote badge (2 Pts) — Requires conditional HTML tag insertion and custom CSS badge styling across card components.
+
+- S5: Posted on text (1 Pt) — Static HTML string injection into card markup with zero backend or logic dependencies.
+
+- S6: Advanced search labels (2 Pts) — Form label alignment across multiple input groups requiring layout verification across standard screen widths.
+
+- S7: Job detail Apply Now CTA (1 Pt) — Addition of a single anchor button tag above the fold with standard focus states.
+
+- S8: Footer trust links (1 Pt) — Minor markup updates in the global footer block; low risk and straightforward.
+
+Total Backlog Point Load: 11 Story Points
 
 ---
 
@@ -112,13 +134,13 @@ Create Sprint 1, move three or four Stories into it (approximately 3–6 points)
 
 #### Screenshot 7 — Sprint 1 with the selected Stories inside it
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-5-assign-4-task-6-ss-7.png)
 
 ---
 
 #### Screenshot 8 — One Story showing the Sub-tasks created
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-5-assign-4-task-6-ss-8.png)
 
 ---
 
@@ -132,7 +154,7 @@ Open the Burndown Chart and confirm it exists for Sprint 1. It is acceptable if 
 
 #### Screenshot 9 — Burndown Chart page opened, even if empty
 
-Add your screenshot here.
+![Screenshot 9](screenshots/week-5-assign-4-task-7-ss-9.png)
 
 ---
 
@@ -146,19 +168,19 @@ Implement one small UI-only Story from Sprint 1, commit it, deploy it live, and 
 
 #### Screenshot 10 — Jira board showing the Story moved to Done
 
-Add your screenshot here.
+![Screenshot 10](screenshots/week-5-assign-4-task-8-ss-10.png)
 
 ---
 
 #### Screenshot 11 — Git commit output
 
-Add your screenshot here.
+![Screenshot 11](screenshots/week-5-assign-4-task-8-ss-11.png)
 
 ---
 
 #### Screenshot 12 — Live URL in the browser showing the UI change, with the URL visible
 
-Add your screenshot here.
+![Screenshot 12](screenshots/week-5-assign-4-task-8-ss-12.png)
 
 ---
 
@@ -172,7 +194,7 @@ Add a retro comment covering what went well, what to improve, one Scrum pillar o
 
 #### Screenshot 13 — Jira retro comment visible
 
-Add your screenshot here.
+![Screenshot 13](screenshots/week-5-assign-4-task-9-ss-13.png)
 
 ---
 
@@ -188,13 +210,13 @@ Publish a LinkedIn post about what you delivered, including your live URL, three
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/godwin-obi-008a12177_devops-agile-scrum-share-7493406325566074880-MVSX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
 
 ---
 
 #### Screenshot 14 — Published LinkedIn post
 
-Add your screenshot here.
+![Screenshot 14](screenshots/week-5-assign-4-linkedin-post.png)
 
 ---
 
