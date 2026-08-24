@@ -49,7 +49,7 @@ This is not a course. It is an internship-style program — real deployments, re
 
 <!-- Add your cohort leaderboard rank here as you progress -->
 
-> 🥇 Cohort 3 Rank: **#79** <!-- Update this each week -->
+> 🥇 Cohort 3 Rank: **#43** <!-- Update this each week -->
 
 ---
 
@@ -88,8 +88,8 @@ Week 05 → DevOps Lifecycle & Agile -->
 Week 06 → AWS Cloud
 [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/)
 
-<!-- Week 07 → Azure Cloud -->
-<!-- [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/) -->
+Week 07 → Azure Cloud
+[![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/)
 
 <!-- Week 08 → Terraform -->
 <!-- [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/) -->
@@ -137,7 +137,7 @@ Week 06 → AWS Cloud
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-linux-bash-share-7484746152383438849-KPma/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/beyond-git-push-building-an-ai-assisted-safety-net-for-git-github-2769fecab7c6?sharedUserId=godlonwhitegtr28 |
 | 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_devops-agile-scrum-share-7493406325566074880-MVSX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/unlocking-read-only-ai-governance-in-agile-my-week-5-journey-with-jira-mcp-and-claude-code-c39b105bd46f |
 | 06 | AWS Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-aws-agenticai-share-7494580547957121024-TzT2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/from-zero-to-agentic-ai-audit-my-journey-through-aws-cloud-architecture-348c7ab999fe |
-| 07 | Azure Cloud | 🔄 In Progress | ⏳ Pending | — | — |
+| 07 | Azure Cloud | ✅ Completed | ✅ Solved | https://lnkd.in/p/gNi4aWzu | https://medium.com/@godlonwhitegtr28/building-an-ai-assisted-azure-security-audit-workflow-from-baseline-to-remediation-8964313fcea8?sharedUserId=godlonwhitegtr28 |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
 | 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |

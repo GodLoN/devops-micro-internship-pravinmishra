@@ -30,13 +30,13 @@ Confirm successful Azure Portal access and Locate the required services and subs
 
 #### Screenshot 1 — Azure Portal homepage after successful login
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-7-assign-1-task-5-ss-1.png)
 
 ---
 
 #### Screenshot 2 — "Subscriptions" section showing the "Free Trial" subscription
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-7-assign-1-task-5-ss-2.png)
 
 ---
 
@@ -44,7 +44,7 @@ Add your screenshot here.
 
 Write a three-to-four-line paragraph explaining which Azure services you plan to explore first and why.
 
-Write your answer here.
+To begin my DevOps journey on Azure, I plan to explore Virtual Machines and Resource Groups first. Resource Groups will allow me to maintain clean lifecycle management and logical boundaries for my infrastructure, while Virtual Machines will help me practice provisioning Linux environments, configuring networking, and testing automated web server deployments. Following this, I will explore Azure App Service and Storage Accounts to understand containerized web hosting and cloud artifact storage.
 
 ---
 
