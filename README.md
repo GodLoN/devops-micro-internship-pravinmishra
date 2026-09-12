@@ -49,7 +49,7 @@ This is not a course. It is an internship-style program — real deployments, re
 
 <!-- Add your cohort leaderboard rank here as you progress -->
 
-> 🥇 Cohort 3 Rank: **#43** <!-- Update this each week -->
+> 🥇 Cohort 3 Rank: **#45** <!-- Update this each week -->
 
 ---
 
@@ -91,11 +91,11 @@ Week 06 → AWS Cloud
 Week 07 → Azure Cloud
 [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/)
 
-<!-- Week 08 → Terraform -->
-<!-- [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/) -->
+Week 08 → Terraform
+[![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/)
 
-<!-- Week 09 → Ansible -->
-<!-- [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) -->
+Week 09 → Ansible
+[![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/)
 
 <!-- Week 10 → Azure DevOps CI/CD -->
 <!-- [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/) -->
@@ -136,10 +136,10 @@ Week 07 → Azure Cloud
 | 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-linux-bash-activity-7483553659922923521-2EpI?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/bridging-linux-telemetry-agentic-ai-building-a-human-in-the-loop-incident-triage-system-738675f8c22d |
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-linux-bash-share-7484746152383438849-KPma/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/beyond-git-push-building-an-ai-assisted-safety-net-for-git-github-2769fecab7c6?sharedUserId=godlonwhitegtr28 |
 | 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_devops-agile-scrum-share-7493406325566074880-MVSX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/unlocking-read-only-ai-governance-in-agile-my-week-5-journey-with-jira-mcp-and-claude-code-c39b105bd46f |
-| 06 | AWS Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-aws-agenticai-share-7494580547957121024-TzT2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://medium.com/@godlonwhitegtr28/from-zero-to-agentic-ai-audit-my-journey-through-aws-cloud-architecture-348c7ab999fe |
-| 07 | Azure Cloud | ✅ Completed | ✅ Solved | https://lnkd.in/p/gNi4aWzu | https://medium.com/@godlonwhitegtr28/building-an-ai-assisted-azure-security-audit-workflow-from-baseline-to-remediation-8964313fcea8?sharedUserId=godlonwhitegtr28 |
-| 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
-| 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
+| 06 | AWS Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmibypravinmishra-aws-agenticai-share-7494580547957121024-TzT2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/from-zero-to-agentic-ai-audit-my-journey-through-aws-cloud-architecture-2k8p |
+| 07 | Azure Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmi-devops-micro-internship-with-agentic-activity-7497673437348417536-IV86?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/building-an-ai-assisted-azure-security-audit-workflow-from-baseline-to-remediation-4hj2 |
+| 08 | Terraform | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_godwin-obi-dmi-cohort-3-live-activity-7504158271738621952-gEAH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/agentic-infrastructure-provisioning-policy-guardrails-with-terraform-1nbj |
+| 09 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_godwin-obi-dmi-cohort-3-live-activity-7504158271738621952-gEAH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/automated-configuration-management-ai-assisted-risk-reviews-with-ansible-14kf |
 | 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
 | 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
 | 12 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |

@@ -24,7 +24,7 @@ Create the assignment workspace, initialize a Git repository, prepare the requir
 
 #### Screenshot 1 — Terminal showing the `ansible-onboarding` path, `ls -la` output, and `git status` confirming the Git repository is on the `main` branch
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-9-assign-1-task-1-ss-1.png)
 
 ---
 
@@ -38,7 +38,7 @@ Create an isolated Python virtual environment and install Ansible and the requir
 
 #### Screenshot 2 — Terminal showing the active `(.venv)` environment, `which ansible`, `ansible --version`, `ansible-lint --version`, `yamllint --version`, and `pre-commit --version`
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-9-assign-1-task-2-ss-2.png)
 
 ---
 
@@ -52,13 +52,13 @@ Configure Visual Studio Code to use the project’s Python virtual environment a
 
 #### Screenshot 3 — VS Code Extensions panel showing the Ansible, YAML, and Python extensions installed
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-9-assign-1-task-3-ss-3.png)
 
 ---
 
 #### Screenshot 4 — VS Code showing `.vscode/settings.json` and `.editorconfig` open side by side, with the required settings clearly visible
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-9-assign-1-task-3-ss-4.png)
 
 ---
 
@@ -72,13 +72,13 @@ Create a reusable `ansible.cfg` file containing the default settings that will b
 
 #### Screenshot 5 — `ansible.cfg` open in VS Code or another editor, showing the complete configuration
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-9-assign-1-task-4-ss-5.png)
 
 ---
 
 #### Screenshot 6 — Terminal showing `ansible --version` with the `ansible.cfg` path and the output of `ansible-config dump --only-changed`
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-9-assign-1-task-4-ss-6.png)
 
 ---
 
@@ -92,7 +92,7 @@ Prepare SSH key authentication, load the key into the SSH agent, configure reusa
 
 #### Screenshot 7 — Terminal showing `ssh-add -l` with the ED25519 key loaded and the SSH configuration verification output
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-9-assign-1-task-5-ss-7.png)
 
 ---
 
@@ -106,7 +106,7 @@ Configure your Git identity and install pre-commit hooks that validate YAML and 
 
 #### Screenshot 8 — Terminal showing your Git full name, Git email, default branch, successful `pre-commit install` output, and `.git/hooks/pre-commit`
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-9-assign-1-task-6-ss-8.png)
 
 ---
 
@@ -120,13 +120,13 @@ Verify that Ansible, the linting tools, Git hooks, SSH agent, and Git ignore rul
 
 #### Screenshot 9 — Terminal showing `pre-commit run --all-files` completing successfully
 
-Add your screenshot here.
+![Screenshot 9](screenshots/week-9-assign-1-task-7-ss-9.png)
 
 ---
 
 #### Screenshot 10 — Terminal showing `ansible --version` with the project configuration path and `ssh-add -l` with the ED25519 key loaded
 
-Add your screenshot here.
+![Screenshot 10](screenshots/week-9-assign-1-task-7-ss-10.png)
 
 ---
 
@@ -140,13 +140,13 @@ Document the completed Ansible workstation setup and create a reusable checklist
 
 #### Screenshot 11 — Terminal showing the final `ansible-onboarding` project structure
 
-Add your screenshot here.
+![Screenshot 11](screenshots/week-9-assign-1-task-8-ss-11.png)
 
 ---
 
 #### Screenshot 12 — VS Code Markdown preview showing your full name, project summary, and part of the “New Machine? Do This” checklist
 
-Add your screenshot here.
+![Screenshot 12](screenshots/week-9-assign-1-task-8-ss-12.png)
 
 ---
 
@@ -156,25 +156,33 @@ Answer the following in your own words:
 
 **1. What is one feature that makes your workstation setup team-friendly?**
 
-Add your answer here.
+Standardizing workspace configuration files—specifically `.editorconfig`, `.vscode/settings.json`, and `.pre-commit-config`.yaml makes the setup team-friendly. This guarantees that every engineer who clones the repository automatically inherits identical formatting rules (2-space indentation, LF line endings, trailing whitespace removal), points to the same Python virtual environment path, and executes mandatory YAML and Ansible linting checks before committing code. It eliminates formatting discrepancies and prevents "works on my machine" issues across the team.
 
 ---
 
 **2. What is one pitfall you avoided while completing the setup?**
 
-Add your answer here.
+I avoided installing Ansible and its linting tools globally using the system-level Python interpreter or OS package managers (`sudo apt install`). Installing tools globally risks package dependency conflicts, can break system-level Python libraries on the host OS, and leads to environment drift between developers. Using an isolated `.venv` ensures complete project portability and consistency.
 
 ---
 
 **3. Why should Ansible be installed inside a Python virtual environment?**
 
-Add your answer here.
+Ansible depends on specific Python libraries (such as `jinja2`, `pyyaml`, and `ansible-core`). Installing Ansible inside a dedicated Python virtual environment (`.venv`) guarantees that:
+
+*   All package dependencies and versions are explicitly pinned in `requirements.txt` for exact reproducibility across team workstations and CI/CD pipelines.
+
+*   Updating tools in this project will not conflict with or corrupt system Python packages or other isolated projects on the same machine.
+
+*   Management of dependencies requires no elevated root (`sudo`) permissions on the control node.
 
 ---
 
 **4. Why must SSH private keys and `.venv/` remain outside version control?**
 
-Add your answer here.
+*   **SSH Private Keys:** Committing private keys (`id_ed25519`, `*.pem`, `*.key`) creates a critical security vulnerability. Anyone with access to the Git repository or its commit history could compromise infrastructure hosts that trust those keys.
+
+*   **`.venv/` Directory:** The virtual environment contains OS-specific binaries, machine-dependent absolute symlinks, and hundreds of megabytes of compiled packages. Committing `.venv/` bloats the Git history and breaks when cloned onto machines with different OS distributions or Python minor versions. Virtual environments should always be recreated from `requirements.txt`.
 
 ---
 
