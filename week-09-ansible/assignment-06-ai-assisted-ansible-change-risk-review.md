@@ -329,31 +329,31 @@ Answer the following in your own words:
 
 **1. Which risk category did the added task fall into?**
 
-> **Removal Tasks / File Deletion** (flagged by regex patterns detecting file deletion/removal operations like state=absent).
+**Removal Tasks / File Deletion** (flagged by regex patterns detecting file deletion/removal operations like state=absent).
 
 ---
 
 **2. What evidence proves the task would change something?**
 
-> The `--check --diff` output in `ansible-check-raw.txt` and `ansible-risk-report.txt` explicitly registered `changed=1` for the task `common : Remove temporary EpicBook risk test file`, indicating state drift between the playbook and the host.
+The `--check --diff` output in `ansible-check-raw.txt` and `ansible-risk-report.txt` explicitly registered `changed=1` for the task `common : Remove temporary EpicBook risk test file`, indicating state drift between the playbook and the host.
 
 ---
 
 **3. Did Claude Code apply the playbook?**
 
-> No, Claude Code strictly executed in read-only analysis mode without running the live `ansible-playbook` command or applying changes to the target system.
+No, Claude Code strictly executed in read-only analysis mode without running the live `ansible-playbook` command or applying changes to the target system.
 
 ---
 
 **4. Why is it important that Claude Code only analyzed the risk?**
 
-> Keeping the AI in a read-only advisor role maintains the human-in-the-loop safety boundary, preventing automated infrastructure modifications or unvetted destructive operations in production environments.
+Keeping the AI in a read-only advisor role maintains the human-in-the-loop safety boundary, preventing automated infrastructure modifications or unvetted destructive operations in production environments.
 
 ---
 
 **5. Which phase of the Agentic Loop is represented by the Bash report?**
 
-> **Observation / Perception Phase** (providing deterministic, ground-truth data from the execution environment for the agent to analyze before making decision recommendations).
+**Observation / Perception Phase** (providing deterministic, ground-truth data from the execution environment for the agent to analyze before making decision recommendations).
 
 ---
 
@@ -401,31 +401,31 @@ Answer the following in your own words:
 
 **1. What command did you run to apply the change for real?**
 
-> `ansible-playbook -i inventory.ini site.yml`
+`ansible-playbook -i inventory.ini site.yml`
 
 ---
 
 **2. Who made the final decision to apply the playbook?**
 
-> The human operator (Godwin Obi) after evaluating the risk assessment report generated during the dry run.
+The human operator (Godwin Obi) after evaluating the risk assessment report generated during the dry run.
 
 ---
 
 **3. What evidence proves the VM is still reachable?**
 
-> Running `ansible web -i inventory.ini -m ping` returned a successful ping response (`webserver1 | SUCCESS => {"changed": false, "ping": "pong"}`).
+Running `ansible web -i inventory.ini -m ping` returned a successful ping response (`webserver1 | SUCCESS => {"changed": false, "ping": "pong"}`).
 
 ---
 
 **4. Why should the risk review be run again after applying?**
 
-> Re-running the risk review confirms idempotency and verifies that the system has converged to the target state with zero pending or undetected state drifts (`HEALTHY - no changes detected`).
+Re-running the risk review confirms idempotency and verifies that the system has converged to the target state with zero pending or undetected state drifts (`HEALTHY - no changes detected`).
 
 ---
 
 **5. What could go wrong if an AI agent applied Ansible changes automatically?**
 
-> Unchecked AI execution could trigger destructive tasks, corrupt production databases, remove essential files, or restart critical services out of maintenance windows without human oversight.
+Unchecked AI execution could trigger destructive tasks, corrupt production databases, remove essential files, or restart critical services out of maintenance windows without human oversight.
 
 ---
 
