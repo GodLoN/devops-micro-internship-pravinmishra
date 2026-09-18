@@ -36,7 +36,7 @@ Add a screenshot of Azure Repos showing:
 * Project files
 * `index.html`
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-10-assign-2-task-1-ss-1.png)
 
 ---
 
@@ -65,7 +65,7 @@ Add a screenshot of the saved SSH Service Connection **Overview** page showing:
 * Service Connection name
 * SSH connection type
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-10-assign-2-task-3-ss-2.png)
 
 > Do not expose a password, SSH private key, passphrase, or another credential.
 
@@ -91,7 +91,7 @@ Add a screenshot of `azure-pipelines.yml` open in the Azure Repos editor showing
 * `CopyFilesOverSSH@0` task
 * `SSH@0` verification task
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-10-assign-2-task-4-ss-3.png)
 
 > Ensure that no password, SSH private key, PAT, or AWS credential is visible.
 
@@ -115,7 +115,7 @@ Add a screenshot of the successful pipeline run and log summary showing:
 * Remote-verification step completed
 * Your Full Name visible in the pipeline output
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-10-assign-2-task-5-ss-4.png)
 
 ---
 
@@ -136,15 +136,15 @@ Add a browser screenshot showing:
 * Your Full Name
 * Updated website content after the automatic deployment
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-10-assign-2-task-6-ss-5.png)
 
 ## Final Website URL
 
-`http://<target-vm-public-ip>`
+`http://3.21.40.74/`
 
 Replace the placeholder with your actual website URL:
 
-[Paste your final website URL here]
+[http://3.21.40.74/]
 
 ---
 
@@ -152,7 +152,7 @@ Replace the placeholder with your actual website URL:
 
 Write a short summary of the completed CI/CD workflow.
 
-[Write your summary here.]
+[This project demonstrates an end-to-end CI/CD workflow for deploying a static website to an AWS EC2 instance using Azure DevOps. Terraform was used to provision the EC2 infrastructure and security group, while Ansible configured the server, installed and enabled Nginx, and prepared the web directory. The website source code was stored in Azure Repos, and an Azure DevOps YAML pipeline running on a self-hosted agent automatically validated and deployed the website using CopyFilesOverSSH. The pipeline then used SSH verification to confirm that the website files were deployed, Nginx was active, and the web server returned HTTP 200. The final website was successfully verified through the EC2 public IP and displays the deployed website with my full name, Godwin Obi.]
 
 ---
 
@@ -167,11 +167,11 @@ Add a screenshot of your LinkedIn post containing:
 * Three to five lines describing the CI/CD workflow
 * A screenshot of the successful pipeline or deployed website
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-10-assign-2-linkedin-post-ss-6.png)
 
 ## LinkedIn Post URL
 
-[Paste your public LinkedIn post URL here]
+[https://www.linkedin.com/posts/godwin-obi-008a12177_devops-azuredevops-cicd-activity-7505403362108973056-2hmV?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM]
 
 > Do not expose AWS credentials, SSH private keys, passwords, PATs, or other sensitive information.
 

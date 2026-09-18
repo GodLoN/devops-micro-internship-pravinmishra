@@ -20,7 +20,7 @@ Confirm the latest run on both Azure DevOps and GitHub Actions currently succeed
 
 #### Screenshot 1 — Latest run status on Azure DevOps and/or GitHub Actions showing a successful run
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-10-assign-5-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create `CLAUDE.md` describing the pipeline-triage workflow (gather → analyze �
 
 #### Screenshot 2 — `CLAUDE.md` showing the workflow and safety rules
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-10-assign-5-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Build `pipeline-triage.sh`, a read-only Bash script that fetches the latest run'
 
 #### Screenshot 3 — `pipeline-triage.sh` showing the check functions and their pattern-matching conditionals
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-10-assign-5-task-3-ss-3.png)
 
 ---
 
@@ -62,7 +62,7 @@ Run the script against your current, passing pipeline and confirm it produces a 
 
 #### Screenshot 4 — Script output and report showing a healthy result with no failure category triggered
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-10-assign-5-task-4-ss-4.png)
 
 ---
 
@@ -76,13 +76,13 @@ Create a Claude Code skill restricted to read-only tools (no `Write`) that runs 
 
 #### Screenshot 5 — `SKILL.md` frontmatter showing the tool restrictions and safety rules
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-10-assign-5-task-5-ss-5.png)
 
 ---
 
 #### Screenshot 6 — `/pipeline-triage` output for the healthy pipeline
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-10-assign-5-task-5-ss-6.png)
 
 ---
 
@@ -96,13 +96,13 @@ Introduce one safe, obvious, and easily reversible failure (for example, an inte
 
 #### Screenshot 7 — The failed pipeline run showing the red/failed status
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-10-assign-5-task-6-ss-7.png)
 
 ---
 
 #### Screenshot 8 — `/pipeline-triage` output showing the diagnosed failure category, the quoted log evidence, and the recommended fix
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-10-assign-5-task-6-ss-8.png)
 
 ---
 
@@ -116,13 +116,13 @@ Apply the recommended fix yourself, push it, confirm the pipeline succeeds again
 
 #### Screenshot 9 — The pipeline run succeeding after your fix
 
-Add your screenshot here.
+![Screenshot 9](screenshots/week-10-assign-5-task-7-ss-9.png)
 
 ---
 
 #### Screenshot 10 — Second `/pipeline-triage` output confirming the pipeline is healthy again
 
-Add your screenshot here.
+![Screenshot 10](screenshots/week-10-assign-5-task-7-ss-10.png)
 
 ---
 
@@ -130,7 +130,11 @@ Add your screenshot here.
 
 Explain, in your own words, why the skill was allowed to gather evidence and diagnose the failure but was never allowed to re-trigger the pipeline or apply the fix itself.
 
-Add your answer here
+The skill was allowed to gather evidence and diagnose the failure because it was designed as a read-only troubleshooting assistant. Its allowed tools were limited to `Bash`, `Read`, and `Grep`, which enabled it to execute the triage script, read pipeline reports and logs, and analyze failure evidence without changing the environment.
+
+The skill was never allowed to re-trigger the pipeline or apply the fix because those actions would modify the system state and could introduce unintended changes. The skill explicitly prohibited editing files, modifying pipeline YAML, accessing secrets, retrying, cancelling, approving, or triggering pipeline runs.
+
+This design keeps the human engineer responsible for reviewing the diagnosis, deciding whether the recommendation is correct, applying the fix manually, and verifying the recovery. The AI assists with evidence gathering and analysis while maintaining proper security, accountability, and change control.
 
 ---
 

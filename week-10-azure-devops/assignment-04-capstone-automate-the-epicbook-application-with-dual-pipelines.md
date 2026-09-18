@@ -20,7 +20,7 @@ Prepare `infra-epicbook` (Terraform for network, frontend/backend VMs, MySQL, wi
 
 #### Screenshot 1 — Both repositories showing their required files and separation of responsibilities
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-10-assign-4-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create and validate an Azure Resource Manager SPN service connection (Tenant ID,
 
 #### Screenshot 2 — Azure Resource Manager service connection showing successful configuration with secrets hidden
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-10-assign-4-task-2-ss-2.png)
 
 ---
 
@@ -48,13 +48,13 @@ Create a YAML pipeline for `infra-epicbook` that authenticates via the SPN conne
 
 #### Screenshot 3 — Infra Pipeline run showing `terraform apply` completion and the `app_public_ip` and `mysql_fqdn` outputs
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-10-assign-4-task-3-ss-3.png)
 
 ---
 
 #### Screenshot 4 — Azure Portal confirming the provisioned resources
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-10-assign-4-task-3-ss-4.png)
 
 ---
 
@@ -68,13 +68,13 @@ Upload the SSH private key to Azure DevOps Secure Files, create a YAML pipeline 
 
 #### Screenshot 5 — App Pipeline run summary showing successful completion
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-10-assign-4-task-4-ss-5.png)
 
 ---
 
 #### Screenshot 6 — Ansible playbook output showing successful configuration with `failed=0`
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-10-assign-4-task-4-ss-6.png)
 
 ---
 
@@ -88,7 +88,7 @@ Confirm both pipelines succeeded, the EpicBook application loads through the fro
 
 #### Screenshot 7 — Browser displaying the running EpicBook application with the frontend public IP visible
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-10-assign-4-task-5-ss-7.png)
 
 ---
 
@@ -96,7 +96,38 @@ Add your screenshot here.
 
 Record the frontend public application URL and a short issue-and-resolution note, if applicable.
 
-Write your answer here.
+**Frontend Application URL**
+
+The deployed EpicBook frontend application is available at:
+
+`http://20.57.152.51/`
+
+The application was successfully accessed through the public IP address of the frontend virtual machine after completing the infrastructure provisioning and application deployment pipelines.
+
+**Issue and Resolution Notes**
+
+During the deployment process, an issue was encountered with Ansible SSH connectivity to the private backend server.
+
+The backend VM was not directly accessible from the Azure DevOps self-hosted agent because it was located on a private network. The initial Ansible inventory configuration used ProxyJump incorrectly by passing a complete SSH command, which resulted in the error:
+
+>ssh: Could not resolve hostname ssh: Temporary failure in name resolution
+
+The issue was investigated by reviewing the generated Ansible inventory and SSH connection parameters.
+
+The resolution was to replace the incorrect ProxyJump configuration with an SSH ProxyCommand, allowing the Azure DevOps agent to securely connect through the frontend VM acting as a jump host:
+
+>ProxyCommand="ssh -i <private-key> -o IdentitiesOnly=yes -W %h:%p azureadmin@frontend-public-ip"
+
+After the correction:
+
+* SSH authentication using the Azure DevOps Secure File key succeeded
+* Ansible successfully connected to both frontend and backend servers
+* The playbook completed with:
+    failed=0
+* The EpicBook application was deployed successfully
+* Backend connectivity with MySQL was verified
+
+This troubleshooting process demonstrated the importance of secure SSH routing, infrastructure networking, and automated configuration management in a real-world DevOps deployment workflow.
 
 ---
 
@@ -112,13 +143,13 @@ Publish a LinkedIn post about the completed capstone project, mentioning the two
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/godwin-obi-008a12177_devops-azuredevops-cicd-activity-7506261069007306752-deDX?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the text and at least one link or image
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-10-assign-4-linkedin-post-ss-8.png)
 
 ---
 

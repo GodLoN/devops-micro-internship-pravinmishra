@@ -20,7 +20,7 @@ Import `https://github.com/pravinmishraaws/my-react-app` into Azure Repos and co
 
 #### Screenshot 1 — Azure Repos showing the imported React project with `package.json` and `src/` visible
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-10-assign-3-task-1-ss-1.png)
 
 ---
 
@@ -34,13 +34,13 @@ Provision a new Ubuntu VM with Terraform (ports 22/80 open) and prepare Nginx/`/
 
 #### Screenshot 2 — Terraform output or cloud console showing the new VM and public IP
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-10-assign-3-task-2-ss-2.png)
 
 ---
 
 #### Screenshot 3 — Terminal showing Ansible completed successfully and Nginx is active
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-10-assign-3-task-2-ss-3.png)
 
 ---
 
@@ -54,7 +54,7 @@ Point the `ubuntu-nginx-ssh` Service Connection to the new VM and validate it.
 
 #### Screenshot 4 — SSH Service Connection page showing the new VM connection and successful validation, with the password hidden
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-10-assign-3-task-3-ss-4.png)
 
 ---
 
@@ -68,7 +68,7 @@ Create the Build (npm install/build), Test (`npm test -- --watchAll=false`, bloc
 
 #### Screenshot 5 — Azure Pipeline YAML definition with the Build, Test, Publish, and Deploy sections visible
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-10-assign-3-task-4-ss-5.png)
 
 ---
 
@@ -82,19 +82,19 @@ Confirm a commit to `main` triggers the pipeline, all four stages succeed, the b
 
 #### Screenshot 6 — Pipeline run summary showing Build, Test, Publish, and Deploy succeeded
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-10-assign-3-task-5-ss-6.png)
 
 ---
 
 #### Screenshot 7 — Terminal or pipeline output showing `/var/www/html` after deployment
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-10-assign-3-task-5-ss-7.png)
 
 ---
 
 #### Screenshot 8 — Browser showing the running React application with the public IP visible
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-10-assign-3-task-5-ss-8.png)
 
 ---
 
@@ -110,13 +110,13 @@ Publish a LinkedIn post about the completed assignment, mentioning the Build/Tes
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/godwin-obi-008a12177_devops-azuredevops-cicd-activity-7506261069007306752-deDX?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the text and at least one link or image
 
-Add your screenshot here.
+![Screenshot 9](screenshots/week-10-assign-3-linkedin-post-ss-8.png)
 
 ---
 

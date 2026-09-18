@@ -49,7 +49,7 @@ This is not a course. It is an internship-style program — real deployments, re
 
 <!-- Add your cohort leaderboard rank here as you progress -->
 
-> 🥇 Cohort 3 Rank: **#23** <!-- Update this each week -->
+> 🥇 Cohort 3 Rank: **#08** <!-- Update this each week -->
 
 ---
 
@@ -97,8 +97,8 @@ Week 08 → Terraform
 Week 09 → Ansible
 [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/)
 
-<!-- Week 10 → Azure DevOps CI/CD -->
-<!-- [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/) -->
+Week 10 → Azure DevOps CI/CD
+[![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/)
 
 <!-- Week 11 → Docker -->
 <!-- [![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/) -->
@@ -140,7 +140,7 @@ Week 09 → Ansible
 | 07 | Azure Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_dmi-devops-micro-internship-with-agentic-activity-7497673437348417536-IV86?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/building-an-ai-assisted-azure-security-audit-workflow-from-baseline-to-remediation-4hj2 |
 | 08 | Terraform | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_godwin-obi-dmi-cohort-3-live-activity-7504158271738621952-gEAH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/agentic-infrastructure-provisioning-policy-guardrails-with-terraform-1nbj |
 | 09 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_godwin-obi-dmi-cohort-3-live-activity-7504158271738621952-gEAH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/automated-configuration-management-ai-assisted-risk-reviews-with-ansible-14kf |
-| 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
+| 10 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_devops-azuredevops-cicd-activity-7506261069007306752-deDX?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/building-an-automated-devops-deployment-workflow-for-epicbook-using-terraform-ansible-and-azure-idm |
 | 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
 | 12 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
 | 13 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
