@@ -1,26 +1,34 @@
-# Assignment 1 — Deploy a Static Website on a Cloud VM Using Docker
-
-Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
+# Assignment 01 — Deploy a Static Website on a Cloud VM Using Docker
 
 ---
 
 ## Purpose
 
-In this assignment, you will provision a cloud VM (AWS or Azure), automate Docker installation using Cloud-Init, containerize a static website with Docker and Nginx, and deploy it so it's accessible through the VM's public IP.
+In this assignment, you will provision a cloud virtual machine on AWS or Azure, automate Docker installation using Cloud-Init, containerize a static website using Docker and Nginx, and deploy it so that it is accessible through the VM public IP address.
+
+> Choose either AWS or Azure. You do not need to complete the assignment on both platforms.
 
 ---
 
-# Task 1 — Launch the Cloud Virtual Machine
+# Task 1 — Provision the Cloud Virtual Machine
 
 ## Goal
 
-Provision an Ubuntu VM on AWS or Azure with a public IP and Security Group/NSG rules allowing SSH (22) and HTTP (80).
+Provision a Linux virtual machine with internet connectivity.
 
 ### Evidence
 
-#### Screenshot 1 — Cloud VM overview page showing the running VM, public IP, and security rules
+#### Screenshot 1 — Cloud VM Overview
 
-![Screenshot 1](screenshots/week-11-assign-1-task-1-ss-1.png)
+Add a screenshot of the cloud console showing:
+
+- Running VM
+- Public IP address
+- Security Group or Network Security Group inbound rules
+- SSH port 22 enabled from your IP address
+- HTTP port 80 enabled from Anywhere
+
+Add your screenshot here.
 
 ---
 
@@ -28,13 +36,21 @@ Provision an Ubuntu VM on AWS or Azure with a public IP and Security Group/NSG r
 
 ## Goal
 
-Configure User Data (AWS) or Custom Data (Azure) to automatically install Docker during VM provisioning.
+Automatically install Docker during VM provisioning using Cloud-Init.
 
 ### Evidence
 
-#### Screenshot 2 — Output of `cat /var/log/cloud-init-output.log` showing Docker installation activity
+#### Screenshot 2 — Cloud-Init Docker Installation Log
 
-![Screenshot 2](screenshots/week-11-assign-1-task-2-ss-2.png)
+Add a screenshot of the terminal showing the output of:
+
+```bash
+cat /var/log/cloud-init-output.log
+```
+
+The visible output must show Docker installation activity.
+
+Add your screenshot here.
 
 ---
 
@@ -42,13 +58,25 @@ Configure User Data (AWS) or Custom Data (Azure) to automatically install Docker
 
 ## Goal
 
-Connect via SSH and confirm Docker is installed and running.
+Verify that Docker was installed successfully and that the Docker daemon is running.
 
 ### Evidence
 
-#### Screenshot 3 — Terminal showing `docker --version` and `docker ps`
+#### Screenshot 3 — Docker Version and Running Docker Daemon
 
-![Screenshot 3](screenshots/week-11-assign-1-task-3-ss-3.png)
+Add a screenshot of the terminal showing both:
+
+```bash
+docker --version
+```
+
+and
+
+```bash
+docker ps
+```
+
+Add your screenshot here.
 
 ---
 
@@ -56,13 +84,15 @@ Connect via SSH and confirm Docker is installed and running.
 
 ## Goal
 
-Clone `https://github.com/pravinmishraaws/Azure-Static-Website.git` and verify the project files.
+Download the static website source code.
 
 ### Evidence
 
-#### Screenshot 4 — Terminal showing the project directory contents
+#### Screenshot 4 — Application Project Files
 
-![Screenshot 4](screenshots/week-11-assign-1-task-4-ss-4.png)
+Add a screenshot of the terminal showing the contents of the `Azure-Static-Website` project directory after cloning the repository.
+
+Add your screenshot here.
 
 ---
 
@@ -70,13 +100,21 @@ Clone `https://github.com/pravinmishraaws/Azure-Static-Website.git` and verify t
 
 ## Goal
 
-Create a Dockerfile that serves the static site with `nginx:alpine`.
+Containerize the static website using Nginx.
 
 ### Evidence
 
-#### Screenshot 5 — Dockerfile contents
+#### Screenshot 5 — Dockerfile Contents
 
-![Screenshot 5](screenshots/week-11-assign-1-task-5-ss-5.png)
+Add a screenshot of the terminal showing the output of:
+
+```bash
+cat Dockerfile
+```
+
+The Dockerfile must use `nginx:alpine`, copy the website files to the Nginx web root, and expose port 80.
+
+Add your screenshot here.
 
 ---
 
@@ -84,13 +122,21 @@ Create a Dockerfile that serves the static site with `nginx:alpine`.
 
 ## Goal
 
-Build the image tagged `static-site:latest`.
+Build a Docker image for the static website.
 
 ### Evidence
 
-#### Screenshot 6 — Terminal showing `docker images` with the `static-site:latest` image
+#### Screenshot 6 — Docker Image Verification
 
-![Screenshot 6](screenshots/week-11-assign-1-task-6-ss-6.png)
+Add a screenshot of the terminal showing:
+
+```bash
+docker images
+```
+
+The output must include the `static-site` image with the `latest` tag.
+
+Add your screenshot here.
 
 ---
 
@@ -98,13 +144,25 @@ Build the image tagged `static-site:latest`.
 
 ## Goal
 
-Run the container mapping port 80, named `static-site`.
+Run the containerized static website and map it to port 80 on the VM.
 
 ### Evidence
 
-#### Screenshot 7 — Terminal showing `docker ps` displaying the running container
+#### Screenshot 7 — Running Docker Container
 
-![Screenshot 7](screenshots/week-11-assign-1-task-7-ss-7.png)
+Add a screenshot of the terminal showing:
+
+```bash
+docker ps
+```
+
+The output must show the running `static-site` container with the port mapping:
+
+```text
+0.0.0.0:80->80/tcp
+```
+
+Add your screenshot here.
 
 ---
 
@@ -112,62 +170,80 @@ Run the container mapping port 80, named `static-site`.
 
 ## Goal
 
-Confirm the site is accessible through the VM's public IP in a browser.
+Verify that the static website is publicly accessible through the VM public IP address.
 
 ### Evidence
 
-#### Screenshot 8 — Terminal showing the Public IP
+#### Screenshot 8 — VM Public IP Address
 
-![Screenshot 8](screenshots/week-11-assign-1-task-8-ss-8.png)
+Add a screenshot of the terminal showing the output of:
+
+```bash
+curl ifconfig.me
+```
+
+Add your screenshot here.
 
 ---
 
-#### Screenshot 9 — Browser displaying the deployed website
+#### Screenshot 9 — Deployed Static Website
 
-![Screenshot 9](screenshots/week-11-assign-1-task-8-ss-9.png)
+Add a screenshot of the browser showing the deployed static website.
+
+Ensure that the VM public IP address is visible in the browser address bar.
+
+Add your screenshot here.
 
 ---
 
-# LinkedIn Post (Optional)
+# Public Application URL
+
+**VM Public IP / Application URL:** `Add your application URL here`
+
+---
+
+# LinkedIn Requirement
 
 ## Goal
 
 Create a LinkedIn post describing what you deployed, the deployment process, and key learning outcomes.
 
-## Evidence
+### Evidence
 
-#### LinkedIn Post URL
+**LinkedIn Post URL:** `Add your LinkedIn Post URL here`
 
-Paste your LinkedIn post URL here:
+#### LinkedIn Post Screenshot
 
-`https://www.linkedin.com/posts/godwin-obi-008a12177_devops-docker-aws-activity-7508306458355302401-byfx?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
-
----
-
-#### Screenshot — Published LinkedIn post
-
-![Screenshot 10](screenshots/week-11-assign-1-linkedin-post-ss-10.png)
+Add a screenshot of the published LinkedIn post here.
 
 ---
 
 # Submission Instructions
 
-- Add all required screenshots in your submission
-- Full name must be visible in required screenshots
-- Do not expose sensitive information (passwords, keys, account IDs)
+- Complete all tasks in sequence.
+- Include all required screenshots.
+- Ensure that your full name is visible in all required screenshots.
+- Do not expose passwords, private keys, access keys, tokens, account IDs, or other sensitive information.
+- Follow the Assignment Submission Guidelines.
 
 ---
 
 # Completion Checklist
 
-- [ ] Task 1: Cloud VM provisioned with required networking (Screenshot 1)
-- [ ] Task 2: Docker installed via Cloud-Init (Screenshot 2)
-- [ ] Task 3: Docker installation verified (Screenshot 3)
-- [ ] Task 4: Application repository cloned (Screenshot 4)
-- [ ] Task 5: Dockerfile created (Screenshot 5)
-- [ ] Task 6: Docker image built (Screenshot 6)
-- [ ] Task 7: Container deployed and running (Screenshot 7)
-- [ ] Task 8: Website accessible via public IP (Screenshots 8–9)
+- [ ] Cloud VM provisioned successfully
+- [ ] Public IP enabled
+- [ ] SSH port 22 restricted to my IP address
+- [ ] HTTP port 80 enabled from Anywhere
+- [ ] Docker installed using Cloud-Init
+- [ ] Cloud-Init Docker installation log captured
+- [ ] Docker installation verified
+- [ ] Static website repository cloned
+- [ ] Dockerfile created and verified
+- [ ] Docker image built successfully
+- [ ] Docker container is running with port 80 mapped
+- [ ] Website is accessible through the VM public IP
+- [ ] All required screenshots included
+- [ ] Full name visible in required screenshots
 - [ ] No sensitive information exposed
 
 ---
@@ -192,4 +268,4 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ---
 
-*This submission is part of DevOps Micro Internship (DMI) Cohort 3 — Agentic AI Track.*
+*This submission is part of DevOps Micro Internship (DMI) — Agentic AI Track.*
