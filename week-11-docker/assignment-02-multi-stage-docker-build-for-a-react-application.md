@@ -30,7 +30,7 @@ cat .dockerignore
 
 The file must exclude `node_modules`, `build`, and `.env`.
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-11-assign-2-task-1-ss-1.png)
 
 ---
 
@@ -46,7 +46,7 @@ Create a baseline single-stage Docker image and run the application on port 3000
 
 Add a screenshot showing the completed `Dockerfile.single`.
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-11-assign-2-task-2-ss-2.png)
 
 ---
 
@@ -60,7 +60,7 @@ http://localhost:3000
 
 Ensure that your full name is visible in the application.
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-11-assign-2-task-2-ss-3.png)
 
 ---
 
@@ -76,7 +76,7 @@ Create an optimized multi-stage Docker image with separate builder and Nginx run
 
 Add a screenshot showing the completed multi-stage `Dockerfile`.
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-11-assign-2-task-3-ss-4.png)
 
 ---
 
@@ -90,7 +90,7 @@ http://localhost
 
 Ensure that your full name is visible in the application.
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-11-assign-2-task-3-ss-5.png)
 
 ---
 
@@ -117,7 +117,7 @@ react-single:latest
 react-multistage:latest
 ```
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-11-assign-2-task-4-ss-6.png)
 
 ---
 
@@ -126,15 +126,15 @@ Add your screenshot here.
 Record the image sizes and calculate the reduction using the same unit for both images.
 
 ```text
-Single-stage image size: Add size here
+Single-stage image size: 863 MB
 
-Multi-stage image size: Add size here
+Multi-stage image size: 95 MB
 
 Percentage reduction =
 ((Single-stage image size − Multi-stage image size)
 ÷ Single-stage image size) × 100
 
-Percentage reduction: Add result here
+Percentage reduction: 89.0% reduction
 ```
 
 ---
@@ -156,7 +156,7 @@ Write a short analysis of 5–8 lines covering:
 - How smaller images improve image pull and deployment speed
 - One Docker build-caching optimization you used
 
-Write your analysis here.
+The single-stage Docker image is 863 MB, while the multi-stage image is only 95 MB, giving an approximately 89.0% reduction in image size. The multi-stage build keeps Node.js, npm, source code, and build dependencies in the temporary build stage and copies only the React production files into the final Nginx image. This reduces unnecessary software in the production container, which helps reduce the potential attack surface and the amount of software that needs to be maintained or patched. The smaller image also uses less storage and can generally be pulled and deployed faster, depending on network and environment conditions. Docker build caching was optimized by copying `package*.json` and running `npm install` before copying the remaining application source, allowing the dependency layer to be reused when only source files change.
 
 ---
 
@@ -191,13 +191,13 @@ Create a LinkedIn post describing what you built, what a multi-stage Docker buil
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/godwin-obi-008a12177_devops-docker-dockerbuild-activity-7510762983753658369-KNdJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
 
 ---
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of the published LinkedIn post here.
+![Screenshot 8](screenshots/week-11-assign-2-linkedin-post-ss-8.png)
 
 ---
 
