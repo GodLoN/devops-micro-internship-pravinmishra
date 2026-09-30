@@ -30,7 +30,7 @@ backend/
 docker-compose.yml
 ```
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-11-assign-6-task-1-ss-1.png)
 
 ---
 
@@ -47,7 +47,7 @@ backend/.dockerignore
 
 Ensure that no real passwords, tokens, or secrets are visible.
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-11-assign-6-task-1-ss-2.png)
 
 ---
 
@@ -63,7 +63,7 @@ Prepare Dockerfiles for the frontend and backend services and build both service
 
 Add a screenshot showing the completed `frontend/Dockerfile`.
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-11-assign-6-task-2-ss-3.png)
 
 ---
 
@@ -71,7 +71,7 @@ Add your screenshot here.
 
 Add a screenshot showing the completed `backend/Dockerfile`.
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-11-assign-6-task-2-ss-4.png)
 
 ---
 
@@ -83,7 +83,7 @@ Add a screenshot of the terminal showing successful completion of:
 docker compose build
 ```
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-11-assign-6-task-2-ss-5.png)
 
 ---
 
@@ -105,7 +105,7 @@ Add a screenshot showing the MySQL service in `docker-compose.yml`, including:
 - `mysql_data` volume mount
 - No published MySQL port
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-11-assign-6-task-3-ss-6.png)
 
 ---
 
@@ -118,7 +118,7 @@ Add a screenshot showing the backend service configuration, including:
 - Browser frontend origin configured for CORS
 - Published backend port
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-11-assign-6-task-3-ss-7.png)
 
 ---
 
@@ -130,7 +130,7 @@ Add a screenshot showing the frontend service configuration, including:
 - `depends_on` for the backend service
 - Browser-facing `NEXT_PUBLIC_API_URL`
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-11-assign-6-task-3-ss-8.png)
 
 ---
 
@@ -138,7 +138,7 @@ Add your screenshot here.
 
 Add a screenshot showing the `mysql_data` volume definition in `docker-compose.yml`.
 
-Add your screenshot here.
+![Screenshot 9](screenshots/week-11-assign-6-task-3-ss-9.png)
 
 ---
 
@@ -160,7 +160,7 @@ docker compose ps
 
 The output must show the MySQL, backend, and frontend services running. MySQL must show as healthy.
 
-Add your screenshot here.
+![Screenshot 10](screenshots/week-11-assign-6-task-4-ss-10.png)
 
 ---
 
@@ -174,7 +174,7 @@ docker compose logs mysql backend --tail=50
 
 The logs must show MySQL readiness and successful backend database connection.
 
-Add your screenshot here.
+![Screenshot 11](screenshots/week-11-assign-6-task-4-ss-11.png)
 
 ---
 
@@ -192,7 +192,7 @@ Add a browser screenshot showing successful user registration or login.
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot 12](screenshots/week-11-assign-6-task-5-ss-12.png)
 
 ---
 
@@ -202,7 +202,7 @@ Add a browser screenshot showing a created book review visible in the applicatio
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot 13](screenshots/week-11-assign-6-task-5-ss-13.png)
 
 ---
 
@@ -213,7 +213,7 @@ Add a browser developer-tools screenshot with:
 - The Network tab showing a successful API request
 - The Console drawer showing no CORS error after the API interaction
 
-Add your screenshot here.
+![Screenshot 14](screenshots/week-11-assign-6-task-5-ss-14.png)
 
 ---
 
@@ -231,7 +231,7 @@ Add a browser screenshot showing the registered user or created review before th
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot 15](screenshots/week-11-assign-6-task-6-ss-15.png)
 
 ---
 
@@ -247,7 +247,7 @@ docker compose ps
 
 Do not use `docker compose down -v`.
 
-Add your screenshot here.
+![Screenshot 16](screenshots/week-11-assign-6-task-6-ss-16.png)
 
 ---
 
@@ -257,7 +257,7 @@ Add a browser screenshot showing the same registered user or review after the st
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot 17](screenshots/week-11-assign-6-task-6-ss-17.png)
 
 ---
 
@@ -277,13 +277,23 @@ Write a short explanation of 5–8 lines covering:
 - When a full reset is useful
 - Why a full reset must not be used before persistence evidence is captured
 
-Write your explanation here.
+`docker compose down` stops and removes the Compose containers and network but preserves named volumes by default.
+
+Because the MySQL data is stored in the named `mysql_data` volume, the database contents remain available after the containers are recreated.
+
+`docker compose down -v` additionally removes the named volumes and permanently deletes the stored database data.
+
+Using `down -v` is useful when a completely clean environment or database reset is required.
+However, it must not be used before a persistence test because it would remove the very data we need to prove was preserved.
+
+For this assignment, `docker compose down` followed by `docker compose up -d` demonstrated that the user and review data survived the container restart.
+
 
 ---
 
 # Final Public Frontend URL
 
-**Frontend URL:** `http://<VM_PUBLIC_IP>:<FRONTEND_PORT>`
+**Frontend URL:** `http://13.58.78.80:3000`
 
 Replace the placeholder with your working application URL.
 
@@ -291,7 +301,7 @@ Replace the placeholder with your working application URL.
 
 # GitHub Repository URL
 
-**Your Fork or Repository URL:** `Add your GitHub repository URL here`
+**Your Fork or Repository URL:** `https://github.com/GodLoN/book-review-app.git`
 
 ---
 
@@ -303,11 +313,11 @@ Create a LinkedIn post about the Book Review App deployment and what you learned
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn post URL here`
+**LinkedIn Post URL:** `https://www.linkedin.com/posts/godwin-obi-008a12177_devops-docker-dockercompose-activity-7511113483501891584-WH30?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of your published LinkedIn post here.
+![Screenshot 18](screenshots/week-11-assign-6-linkedin-post-ss-18.png)
 
 ---
 
