@@ -12,7 +12,7 @@ In this assignment, you will build a read-only Bash script that audits a running
 
 # Target Container
 
-**Target Container Name:** `Add the exact container name here`
+**Target Container Name:** `theepicbook-frontend-1`
 
 ---
 
@@ -33,7 +33,7 @@ docker-audit.sh
 SKILL.md
 ```
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-11-assign-8-task-1-ss-1.png)
 
 ---
 
@@ -49,7 +49,7 @@ Add the supplied `docker-audit` skill to Claude Code and confirm that it is avai
 
 Add a screenshot of Claude Code showing `docker-audit` in the available skill list.
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-11-assign-8-task-2-ss-2.png)
 
 ---
 
@@ -70,7 +70,7 @@ Add a terminal screenshot showing:
 - Your full name
 - The usage message displayed when the script runs without a container name
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-11-assign-8-task-3-ss-3.png)
 
 ---
 
@@ -90,7 +90,7 @@ Add a terminal screenshot showing:
 - `docker ps`
 - The audit command using the selected target container name
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-11-assign-8-task-4-ss-4.png)
 
 ---
 
@@ -98,7 +98,7 @@ Add your screenshot here.
 
 Add a terminal screenshot showing the initial Docker audit results.
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-11-assign-8-task-4-ss-5.png)
 
 ---
 
@@ -119,7 +119,7 @@ Add a Claude Code screenshot showing:
 - Recommended manual fix
 - Verification method
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-11-assign-8-task-5-ss-6.png)
 
 ---
 
@@ -135,7 +135,7 @@ Manually fix one WARN or FAIL finding from the initial audit.
 
 Add a screenshot of the updated Dockerfile or `docker-compose.yml` showing the selected hardening fix.
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-11-assign-8-task-6-ss-7.png)
 
 ---
 
@@ -143,7 +143,7 @@ Add your screenshot here.
 
 Add a terminal screenshot showing your full name and the rebuilt or recreated service/container running successfully.
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-11-assign-8-task-6-ss-8.png)
 
 ---
 
@@ -163,7 +163,7 @@ Add a terminal screenshot showing:
 - The updated running container
 - The final audit report
 
-Add your screenshot here.
+![Screenshot 9](screenshots/week-11-assign-8-task-7-ss-9.png)
 
 ---
 
@@ -176,7 +176,40 @@ Write a short comparison covering:
 - Final audit result
 - Security benefit of the improvement
 
-Write your comparison here.
+### Initial Audit Finding
+
+The initial hardening audit of the `theepicbook-frontend-1` container identified **two warnings**:
+
+* **Container User:** WARN — the container runs as root or has no non-root user configured.
+* **Image Tag:** WARN — the image used `theepicbook-frontend` without an explicit version tag.
+
+The remaining checks passed: the container was running, a health check was configured, privileged mode was disabled, and no host port was directly published.
+
+### Hardening Change Applied
+
+One approved hardening improvement was selected and applied to the Docker Compose configuration. The frontend service was changed from an untagged image reference to an explicit version:
+
+`image: theepicbook-frontend:1.0.0`
+
+The Compose configuration was validated successfully, and the frontend service was rebuilt and recreated using the updated image.
+
+### Final Audit Result
+
+The final audit confirmed that the **Image Tag** finding changed from **WARN → PASS**:
+
+* Container running: **PASS**
+* Container user: **WARN** — unchanged
+* Health check: **PASS**
+* Image tag: **PASS** — `theepicbook-frontend:1.0.0`
+* Privileged mode: **PASS**
+* Published host ports: **PASS**
+
+### Security Benefit
+
+Using an explicit image version makes the container deployment **more deterministic and reproducible**. It avoids relying on an implicit or mutable image reference and makes it clear which image version is being deployed, improving deployment consistency and reducing configuration ambiguity.
+
+The container-user warning was intentionally left unchanged because addressing it safely would require additional Nginx configuration and permission changes beyond the single approved hardening fix required for this assignment.
+
 
 ---
 
@@ -188,13 +221,13 @@ Create a LinkedIn post about the container security checks you performed, one ha
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn post URL here`
+**LinkedIn Post URL:** `https://www.linkedin.com/posts/godwin-obi-008a12177_devops-docker-containersecurity-share-7511703167596765184-UuFX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM`
 
 #### LinkedIn Post Screenshot
 
 Add a screenshot of the published LinkedIn post, including the final audit result.
 
-Add your screenshot here.
+![Screenshot 10](screenshots/week-11-assign-8-linkedin-post-ss-10.png)
 
 ---
 
