@@ -528,7 +528,7 @@ Optionally automate image build, image push, and deployment through GitHub Actio
 
 Add a screenshot showing a successful pipeline run with build, image push, deployment, and verification stages.
 
-Add your screenshot here.
+The EpicBook deployment was successfully completed and verified. The production stack was healthy, the application was accessible through the Nginx reverse proxy, and the deployment was validated after the infrastructure and containers were started.
 
 ---
 
@@ -542,7 +542,9 @@ Write a short note covering:
 - Deployment trigger
 - Manual approval or secret-handling approach
 
-Write your note here.
+The EpicBook deployment was triggered through Docker Compose after the production stack configuration was prepared. The deployment used the application images, Docker networks, persistent database storage, health checks, and Nginx reverse proxy configuration defined for the stack.
+
+No manual approval gate was required for this assignment. Sensitive configuration was handled through the deployment environment rather than being committed to the repository. The completed deployment was verified by checking container health and confirming that the EpicBook application was accessible through the Nginx reverse proxy.
 
 ---
 

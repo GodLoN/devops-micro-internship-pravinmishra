@@ -308,7 +308,13 @@ Write a short explanation covering:
 - How Task 2 proved Docker Volume persistence
 - Why Docker Volumes are commonly used for application data
 
-Write your explanation here.
+A Bind Mount maps a specific file or directory from the host machine into a container, while a Docker Volume is managed by Docker and stored in Docker's own storage area.
+
+Task 1 proved Bind Mount persistence by showing that the data remained available after the container was removed and recreated. This demonstrated that the data was stored on the host rather than inside the container.
+
+Task 2 proved Docker Volume persistence by showing that data stored in the volume remained available after the container was removed and recreated. This demonstrated that the volume exists independently of the container.
+
+Docker Volumes are commonly used for application data because Docker manages their storage and lifecycle, making persistent data easier to maintain and reuse across containers.
 
 ---
 
