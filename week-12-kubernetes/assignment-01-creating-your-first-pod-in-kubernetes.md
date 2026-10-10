@@ -20,7 +20,7 @@ Create the `~/k8s-labs/pods` working directory for all Pod-related files.
 
 #### Screenshot 1 — Terminal showing the `~/k8s-labs/pods` working directory
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-12-assign-1-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create `nginx-pod` with `kubectl run --image=nginx`, verify it reaches Running, 
 
 #### Screenshot 2 — Terminal showing `nginx-pod` in Running state before deletion
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-12-assign-1-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Write `nginx-pod.yaml` (apiVersion `v1`, kind `Pod`, label `app: nginx`, contain
 
 #### Screenshot 3 — `nginx-pod.yaml` and terminal output showing `nginx-pod` in Running state
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-12-assign-1-task-3-ss-3.png)
 
 ---
 
@@ -62,7 +62,7 @@ Run `kubectl describe`, `kubectl logs`, and `kubectl exec -it ... -- /bin/bash` 
 
 #### Screenshot 4 — Terminal showing `kubectl describe`, `kubectl logs`, or the `/usr/share/nginx/html` directory
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-12-assign-1-task-4-ss-4.png)
 
 ---
 

@@ -20,7 +20,7 @@ Create the `~/k8s-labs/replicasets` working directory.
 
 #### Screenshot 1 — Terminal showing the `~/k8s-labs/replicasets` working directory
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-12-assign-2-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Write `nginx-replicaset.yaml` (apiVersion `apps/v1`, kind `ReplicaSet`, 3 replic
 
 #### Screenshot 2 — `nginx-replicaset.yaml` and terminal output showing three running Pods
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-12-assign-2-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Delete one Pod managed by `nginx-replicaset` and confirm Kubernetes creates a re
 
 #### Screenshot 3 — Terminal showing the deleted Pod and the newly created replacement, with the desired count remaining three
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-12-assign-2-task-3-ss-3.png)
 
 ---
 
@@ -62,7 +62,7 @@ Change `replicas` from 3 to 5, reapply the manifest, and confirm five Pods are m
 
 #### Screenshot 4 — Terminal showing five Pods and the `nginx-replicaset` details
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-12-assign-2-task-4-ss-4.png)
 
 ---
 
