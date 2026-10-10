@@ -20,7 +20,7 @@ Create the `~/k8s-labs/deployments` working directory.
 
 #### Screenshot 1 — Terminal showing the `~/k8s-labs/deployments` working directory
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-12-assign-3-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create `nginx-deployment.yaml` with two replicas and image `nginx:1.21.1`, apply
 
 #### Screenshot 2 — Manifest plus `kubectl` output showing the Deployment, ReplicaSet, and two Pods
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-12-assign-3-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Add `strategy.rollingUpdate` with `maxSurge: 1` and `maxUnavailable: 0` to the D
 
 #### Screenshot 3 — Deployment YAML showing the RollingUpdate strategy and successful apply output
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-12-assign-3-task-3-ss-3.png)
 
 ---
 
@@ -62,7 +62,7 @@ Update the image to `nginx:1.23.1` with `kubectl set image`, watch the rollout, 
 
 #### Screenshot 4 — Rolling-update status, multiple ReplicaSets, and successful rollback/history output
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-12-assign-3-task-4-ss-4.png)
 
 ---
 
@@ -76,7 +76,7 @@ Scale to five replicas, verify, then scale back to two.
 
 #### Screenshot 5 — Terminal showing the scale-up and scale-down results
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-12-assign-3-task-5-ss-5.png)
 
 ---
 
@@ -84,7 +84,8 @@ Add your screenshot here.
 
 Write a short note describing what the lab demonstrated.
 
-Write your answer here.
+This lab demonstrated how Kubernetes Deployments manage application Pods through ReplicaSets. I created an NGINX Deployment with two replicas and configured a RollingUpdate strategy using `maxSurge: 1` and `maxUnavailable: 0` to help maintain Pod availability during updates. I updated the NGINX image from `1.21.1` to `1.23.1`, monitored the rollout, and used `kubectl rollout undo` to restore the previous version. Finally, I scaled the Deployment from two replicas to five and back to two using `kubectl scale`. This exercise helped me understand Deployment management, rolling updates, rollback, and workload scaling in Kubernetes.
+
 
 ---
 
