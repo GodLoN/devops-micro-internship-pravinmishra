@@ -20,7 +20,7 @@ Deploy two NGINX Pods without probes (`00-nginx-deploy-baseline.yaml`) to establ
 
 #### Screenshot 1 — Baseline manifest and healthy two-Pod rollout output
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-12-assign-5-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Add an HTTP readiness probe on `/` port 80 (`01-nginx-deploy-readiness.yaml`) an
 
 #### Screenshot 2 — Pod description showing the readiness probe and `Ready=True`
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-12-assign-5-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Change the readiness path to `/does-not-exist`, observe `NotReady` and a stalled
 
 #### Screenshot 3 — `NotReady` conditions followed by a successful fixed rollout
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-12-assign-5-task-3-ss-3.png)
 
 ---
 
@@ -62,7 +62,7 @@ Perform a good image update to `nginx:1.21.2`, then attempt an update to `nginx:
 
 #### Screenshot 4 — Successful good rollout, stalled broken rollout, and successful recovery
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-12-assign-5-task-4-ss-4.png)
 
 ---
 
@@ -76,7 +76,7 @@ Review probe timing/thresholds and retain or delete the Deployment.
 
 #### Screenshot 5 — Final healthy Pod state or optional cleanup output
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-12-assign-5-task-5-ss-5.png)
 
 ---
 
@@ -84,7 +84,7 @@ Add your screenshot here.
 
 Write a short note describing what the lab demonstrated.
 
-Write your answer here.
+This lab demonstrated how Kubernetes readiness probes determine when Pods are ready to serve traffic. The baseline Deployment ran two NGINX Pods without probes. After adding an HTTP readiness probe, I intentionally configured an invalid path and observed that the new Pod became NotReady while the rollout stalled. Restoring the valid probe allowed the Deployment to recover. I also demonstrated how readiness checks and `maxUnavailable: 0` help protect existing healthy Pods during rolling updates. The requested `nginx:1.21.2` image was unavailable, so I used the verified `nginx:1.21.6` image for the successful update test.
 
 ---
 
