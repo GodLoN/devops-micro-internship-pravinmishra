@@ -20,7 +20,7 @@ Create the `~/k8s-labs/autoscaling` working directory.
 
 #### Screenshot 1 — Terminal showing the `autoscaling` directory
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-12-assign-4-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create `demo-autohealing` (two replicas), delete one Pod, and confirm the desire
 
 #### Screenshot 2 — Deleted Pod and replacement Pod with the replica count restored
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-12-assign-4-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Deploy `nginx-deployment` with CPU `requests: 100m` / `limits: 200m`, then enabl
 
 #### Screenshot 3 — Deployment resources plus successful Metrics Server status
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-12-assign-4-task-3-ss-3.png)
 
 ---
 
@@ -62,7 +62,7 @@ Create an HPA (imperatively via `kubectl autoscale` or declaratively via `autosc
 
 #### Screenshot 4 — `kubectl get hpa` and `kubectl describe hpa nginx-hpa` output
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-12-assign-4-task-4-ss-4.png)
 
 ---
 
@@ -76,7 +76,7 @@ Generate CPU load inside an NGINX Pod (`yes > /dev/null`) and monitor whether th
 
 #### Screenshot 5 — HPA output showing current metrics and any replica increase
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-12-assign-4-task-5-ss-5.png)
 
 ---
 
@@ -84,7 +84,15 @@ Add your screenshot here.
 
 Write a short note describing what the lab demonstrated.
 
-Write your answer here.
+In this lab, I demonstrated Kubernetes auto-healing and horizontal pod autoscaling using a local Kind cluster.
+
+I deployed `demo-autohealing` with two replicas and verified that Kubernetes automatically replaced a deleted Pod to maintain the desired replica count.
+
+I deployed `nginx-deployment` with CPU requests of `100m` and limits of `200m`, configured Metrics Server, and created an HPA named `nginx-hpa` with a minimum of two replicas, a maximum of five replicas, and a target CPU utilization of 50%.
+
+During the CPU-load test, CPU utilization reached the HPA target, and Kubernetes automatically increased the NGINX Deployment from two to four replicas. All four Pods were running and ready.
+
+This exercise helped me understand how Kubernetes maintains application availability through auto-healing and adjusts capacity through horizontal autoscaling.
 
 ---
 
