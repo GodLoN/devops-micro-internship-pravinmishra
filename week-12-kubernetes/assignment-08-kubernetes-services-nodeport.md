@@ -20,7 +20,7 @@ Create healthy, labeled NGINX Pods (readiness + liveness probes) for the NodePor
 
 #### Screenshot 1 — Healthy NGINX Pods before Service creation
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-12-assign-8-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create `nginx-svc-nodeport` (type `NodePort`, port 80, `nodePort: 30080`) and in
 
 #### Screenshot 2 — Service output showing `80:30080` and populated endpoints
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-12-assign-8-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Find a reachable node IP and test `<NODE_IP>:30080` externally (curl) and intern
 
 #### Screenshot 3 — Successful external or internal NodePort response
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-12-assign-8-task-3-ss-3.png)
 
 ---
 
@@ -62,7 +62,7 @@ Use the appropriate fallback for your cluster environment (`minikube service --u
 
 #### Screenshot 4 — Minikube helper URL or local validation result
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-12-assign-8-task-4-ss-4.png)
 
 ---
 
@@ -76,7 +76,7 @@ Change the selector to `app: does-not-match`, confirm endpoints empty and the re
 
 #### Screenshot 5 — Empty then restored endpoint output
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-12-assign-8-task-5-ss-5.png)
 
 ---
 
@@ -90,7 +90,7 @@ Delete one backend Pod while calling the NodePort from another terminal, confirm
 
 #### Screenshot 6 — Pod replacement while NodePort remains available
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-12-assign-8-task-6-ss-6.png)
 
 ---
 
@@ -98,7 +98,9 @@ Add your screenshot here.
 
 Write a short note describing what the lab demonstrated.
 
-Write your answer here.
+This lab demonstrated how a Kubernetes NodePort Service exposes an application through a port on each node. I deployed two NGINX replicas with readiness and liveness probes and created `nginx-svc-nodeport` using port 30080. I verified the Service endpoints and successfully accessed NGINX from a client Pod. Because I used a kind cluster, I also validated local Service access through port-forwarding.
+
+I deliberately changed the Service selector to a non-matching label and observed the endpoints become empty. After restoring the correct selector, the endpoints returned. Finally, I deleted one NGINX Pod while continuously sending requests through the NodePort. Kubernetes created a replacement Pod, the Service updated its endpoints, and requests continued to succeed. I learned that NodePort provides a stable node-level access port, while labels, selectors, readiness probes, and endpoint updates determine which Pods receive traffic. External reachability also depends on the cluster's network configuration.
 
 ---
 
