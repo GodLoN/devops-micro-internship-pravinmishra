@@ -20,7 +20,7 @@ Create two healthy, labeled NGINX Pods (readiness + liveness probes) as Service 
 
 #### Screenshot 1 — Two Ready Pods with labels and IPs
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-12-assign-7-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create `nginx-svc` (type `ClusterIP`, selector `app: nginx`, port 80) and inspec
 
 #### Screenshot 2 — Service ClusterIP plus populated Endpoints and EndpointSlices
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-12-assign-7-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Create a BusyBox `tester` Pod and call `nginx-svc` by short name, ClusterIP, and
 
 #### Screenshot 3 — Successful `wget` responses and `nslookup` output
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-12-assign-7-task-3-ss-3.png)
 
 ---
 
@@ -62,7 +62,7 @@ Change the Service selector to `app: does-not-match`, confirm endpoints become e
 
 #### Screenshot 4 — Empty endpoints during failure and restored endpoints after the fix
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-12-assign-7-task-4-ss-4.png)
 
 ---
 
@@ -76,7 +76,7 @@ Scale to one replica, apply a broken readiness patch, confirm the NotReady Pod i
 
 #### Screenshot 5 — NotReady Pod with excluded endpoint, followed by restored endpoint membership
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-12-assign-7-task-5-ss-5.png)
 
 ---
 
@@ -90,7 +90,7 @@ Verify the Service path, then optionally delete `tester` and `nginx-svc`.
 
 #### Screenshot 6 — Final verification or optional cleanup output
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-12-assign-7-task-6-ss-6.png)
 
 ---
 
@@ -98,7 +98,7 @@ Add your screenshot here.
 
 Write a short note describing what the lab demonstrated.
 
-Write your answer here.
+This lab demonstrated how a Kubernetes ClusterIP Service provides stable internal access to changing Pods. I deployed two NGINX replicas with readiness and liveness probes, created a ClusterIP Service, and verified its endpoints and EndpointSlice. From a tester Pod, I accessed NGINX using the Service DNS name and ClusterIP and confirmed DNS resolution. I deliberately broke the Service selector and observed that the endpoints disappeared and requests failed. After restoring the selector, connectivity returned. Finally, I broke the readiness probe and verified that the NotReady Pod was marked `ready: false` in the EndpointSlice while the healthy Pods continued serving traffic. I restored the healthy configuration and verified the Service again. I learned that labels and selectors enable service discovery, Services provide stable internal addresses, and readiness probes help prevent traffic from being routed to unready application instances.
 
 ---
 
