@@ -84,7 +84,7 @@ Add your screenshot here.
 
 Write a short note describing what the lab demonstrated.
 
-Write your answer here.
+This lab demonstrated how Kubernetes liveness probes monitor container health and automatically restart containers when health checks repeatedly fail. I deployed NGINX with two replicas, configured an HTTP liveness probe, and deliberately changed the probe path to an invalid endpoint to trigger failures and observe container restarts and `CrashLoopBackOff`. I restored the correct configuration and verified that both Pods returned to a healthy state with zero restarts. I also reviewed probe settings such as initial delay, period, timeout, and failure threshold. I learned that liveness probes determine when a container needs restarting, while readiness probes determine whether a Pod should receive traffic.
 
 ---
 
