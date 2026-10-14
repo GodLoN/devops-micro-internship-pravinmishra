@@ -20,7 +20,7 @@ Create resource group `rg-aks-lb-lab` and a one-node AKS cluster `aks-lb-lab` (`
 
 #### Screenshot 1 — AKS creation result and Ready node output
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-12-assign-9-task-1-ss-1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create two healthy, probed NGINX Pods for the public Service.
 
 #### Screenshot 2 — Successful rollout and two Ready Pods
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-12-assign-9-task-2-ss-2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Create `nginx-svc-lb` (type `LoadBalancer`, port 80), wait for `EXTERNAL-IP`, an
 
 #### Screenshot 3 — Service with public `EXTERNAL-IP` and successful `curl` output
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-12-assign-9-task-3-ss-3.png)
 
 ---
 
@@ -62,7 +62,7 @@ Apply a broken readiness patch, confirm the Pod leaves the endpoint set and publ
 
 #### Screenshot 4 — Endpoint changes and public `curl` behavior before and after recovery
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-12-assign-9-task-4-ss-4.png)
 
 ---
 
@@ -76,7 +76,7 @@ Scale to four replicas and confirm the endpoint set grows while the public IP st
 
 #### Screenshot 5 — Four replicas/endpoints behind the unchanged public endpoint
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-12-assign-9-task-5-ss-5.png)
 
 ---
 
@@ -90,7 +90,7 @@ Resolve any pending endpoint or unhealthy backend issues, then delete the Kubern
 
 #### Screenshot 6 — Clean final verification or resource deletion command output
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-12-assign-9-task-6-ss-6.png)
 
 ---
 
@@ -98,7 +98,9 @@ Add your screenshot here.
 
 Write a short note describing what the lab demonstrated.
 
-Write your answer here.
+This lab demonstrated how Kubernetes Services expose applications through a stable public endpoint. I deployed two NGINX replicas with readiness and liveness probes and exposed them using an Azure LoadBalancer Service. By deliberately breaking the readiness probe, I observed the pods become unready, the Service endpoints become empty, and public requests time out. After restoring the healthy configuration, endpoints and public access recovered. Scaling the deployment to four replicas increased the available endpoints while the public IP remained unchanged.
+
+**Environment note:** Azure restricted new customer deployments in West Europe and rejected the initially requested VM size. I successfully deployed the cluster in East US using `Standard_D2as_v7` instead of `Standard_B2s`.
 
 ---
 
