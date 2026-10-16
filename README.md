@@ -49,7 +49,7 @@ This is not a course. It is an internship-style program — real deployments, re
 
 <!-- Add your cohort leaderboard rank here as you progress -->
 
-> 🥇 Cohort 3 Rank: **#10** <!-- Update this each week -->
+> 🥇 Cohort 3 Rank: **#06** <!-- Update this each week -->
 
 ---
 
@@ -103,8 +103,8 @@ Week 10 → Azure DevOps CI/CD
 Week 11 → Docker
 [![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/)
 
-<!-- Week 12 → Kubernetes -->
-<!-- [![Week 12 – K8s](./badges/week-12.svg)](./week-12-kubernetes/) -->
+Week 12 → Kubernetes
+[![Week 12 – K8s](./badges/week-12.svg)](./week-12-kubernetes/)
 
 <!-- Week 13 → Final Project / Capstone -->
 <!-- [![Week 13 – Capstone](./badges/week-13.svg)](./week-13-final-project/) -->
@@ -142,7 +142,7 @@ Week 11 → Docker
 | 09 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_godwin-obi-dmi-cohort-3-live-activity-7504158271738621952-gEAH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/automated-configuration-management-ai-assisted-risk-reviews-with-ansible-14kf |
 | 10 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_devops-azuredevops-cicd-activity-7506261069007306752-deDX?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_d9a0862662062c/building-an-automated-devops-deployment-workflow-for-epicbook-using-terraform-ansible-and-azure-idm |
 | 11 | Docker | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_devops-aws-docker-share-7511666341138001922-FyNd/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_3258c746ef5735/my-docker-journey-from-containers-to-security-2835 |
-| 12 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
+| 12 | Kubernetes | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/godwin-obi-008a12177_devops-kubernetes-aiops-share-7516960226462490624-0D1e/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACn5hogBVyHnSR92cyBf5EzFBZEMSepEVPM | https://dev.to/godwin_obi_3258c746ef5735/week-12-of-my-devops-journey-ai-assisted-kubernetes-incident-triage-4f3e |
 | 13 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
 
 **Status:** ⬜ Not Started &nbsp;|&nbsp; 🔄 In Progress &nbsp;|&nbsp; ✅ Completed<br>
