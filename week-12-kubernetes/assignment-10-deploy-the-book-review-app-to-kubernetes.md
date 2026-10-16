@@ -20,13 +20,13 @@ Select a Kubernetes platform, confirm `kubectl` (and Helm, if used) can communic
 
 #### Screenshot 1 — Terminal showing the active Kubernetes context and Ready nodes
 
-Add your screenshot here.
+![Screenshot 1](screenshots/week-12-assign-10-task-1-ss-1.png)
 
 ---
 
 #### Screenshot 2 (if using Helm) — Terminal showing `helm version`
 
-Add your screenshot here.
+![Screenshot 2](screenshots/week-12-assign-10-task-1-ss-2.png)
 
 ---
 
@@ -40,7 +40,7 @@ Create an architecture diagram showing the public entry point, frontend, interna
 
 #### Screenshot 3 — Completed Kubernetes architecture diagram
 
-Add your screenshot here.
+![Screenshot 3](screenshots/week-12-assign-10-task-2-ss-3.png)
 
 ---
 
@@ -54,13 +54,13 @@ Externalize non-sensitive configuration into ConfigMaps and sensitive values (da
 
 #### Screenshot 4 — ConfigMap manifest or `kubectl describe configmap` output showing non-sensitive configuration
 
-Add your screenshot here.
+![Screenshot 4](screenshots/week-12-assign-10-task-3-ss-4.png)
 
 ---
 
 #### Screenshot 5 — Secret object usage with sensitive values hidden or redacted
 
-Add your screenshot here.
+![Screenshot 5](screenshots/week-12-assign-10-task-3-ss-5.png)
 
 ---
 
@@ -74,13 +74,13 @@ Provide a persistent MySQL database (managed service or StatefulSet + PVC) reach
 
 #### Screenshot 6 — Managed MySQL status or MySQL StatefulSet/PVC status
 
-Add your screenshot here.
+![Screenshot 6](screenshots/week-12-assign-10-task-4-ss-6.png)
 
 ---
 
 #### Screenshot 7 — Successful database connectivity or schema verification with credentials hidden
 
-Add your screenshot here.
+![Screenshot 7](screenshots/week-12-assign-10-task-4-ss-7.png)
 
 ---
 
@@ -94,13 +94,13 @@ Run one or two Node.js/Express backend replicas on port 3010, expose them via Cl
 
 #### Screenshot 8 — Backend Deployment, Pods, and internal Service
 
-Add your screenshot here.
+![Screenshot 8](screenshots/week-12-assign-10-task-5-ss-8.png)
 
 ---
 
 #### Screenshot 9 — Backend logs showing successful startup and database connectivity
 
-Add your screenshot here.
+![Screenshot 9](screenshots/week-12-assign-10-task-5-ss-9.png)
 
 ---
 
@@ -114,13 +114,13 @@ Run one or two Next.js frontend replicas behind Nginx on port 80, reverse-proxyi
 
 #### Screenshot 10 — Frontend Deployment and Ready Pods
 
-Add your screenshot here.
+![Screenshot 10](screenshots/week-12-assign-10-task-6-ss-10.png)
 
 ---
 
 #### Screenshot 11 — Nginx reverse-proxy configuration showing the internal backend Service name
 
-Add your screenshot here.
+![Screenshot 11](screenshots/week-12-assign-10-task-6-ss-11.png)
 
 ---
 
@@ -134,13 +134,13 @@ Expose only the frontend publicly (LoadBalancer or Ingress), restrict backend ac
 
 #### Screenshot 12 — Frontend LoadBalancer or Ingress showing the public endpoint
 
-Add your screenshot here.
+![Screenshot 12](screenshots/week-12-assign-10-task-7-ss-12.png)
 
 ---
 
 #### Screenshot 13 — Internal backend Service and NetworkPolicy (or equivalent restriction)
 
-Add your screenshot here.
+![Screenshot 13](screenshots/week-12-assign-10-task-7-ss-13.png)
 
 ---
 
@@ -154,31 +154,31 @@ Confirm the frontend loads publicly, a full user flow reaches the backend and My
 
 #### Screenshot 14 — `kubectl get all` output
 
-Add your screenshot here.
+![Screenshot 14](screenshots/week-12-assign-10-task-8-ss-14.png)
 
 ---
 
 #### Screenshot 15 — Functional Book Review App in the browser with the public URL or IP visible
 
-Add your screenshot here.
+![Screenshot 15](screenshots/week-12-assign-10-task-8-ss-15.png)
 
 ---
 
 #### Screenshot 16 — Frontend Pod logs
 
-Add your screenshot here.
+![Screenshot 16](screenshots/week-12-assign-10-task-8-ss-16.png)
 
 ---
 
 #### Screenshot 17 — Backend Pod logs showing successful requests or database activity
 
-Add your screenshot here.
+![Screenshot 17](screenshots/week-12-assign-10-task-8-ss-17.png)
 
 ---
 
 #### Screenshot 18 (optional) — Kubernetes dashboard
 
-Add your screenshot here.
+Not implemented. Kubernetes resources were managed and monitored using kubectl commands in the terminal. Deployment status, Pod health, Services, persistent storage, and application logs were verified through the Kubernetes CLI.
 
 ---
 
@@ -192,7 +192,7 @@ Optionally package as a Helm chart, add HPA, add readiness/liveness probes, or c
 
 #### Screenshot 19 (optional) — Helm release, HPA, probes, or TLS evidence
 
-Add your screenshot here.
+Optional production enhancements, such as Helm packaging, Horizontal Pod Autoscaling (HPA), and TLS configuration, were not implemented as part of this deployment. The core application was deployed using Kubernetes manifests, with ConfigMaps, Secrets, persistent MySQL storage, Nginx reverse proxy configuration, and NetworkPolicies. Health probes and other production hardening measures can be added in a future iteration.
 
 ---
 
@@ -200,7 +200,42 @@ Add your screenshot here.
 
 Report the Kubernetes platform used, the public frontend URL/IP, a GitHub link to your manifests/Helm chart (if applicable), and the architecture diagram link. Summarize what worked, issues encountered and how they were resolved, and the tools/sources that helped the most.
 
-Write your answer here.
+## Notes
+
+### Kubernetes Platform
+Deployed the Book Review App on a local Kubernetes cluster using **Kind (Kubernetes in Docker)**, managed with `kubectl`.
+
+### Frontend URL
+**Local URL:** http://localhost:8080
+
+The frontend was accessed through Kubernetes port-forwarding to the frontend Service. This is a local endpoint, not a publicly accessible IP address or URL.
+
+### GitHub Repository and Architecture Diagram
+- **GitHub Repository:** https://github.com/GodLoN/book-review-app.git
+- **Architecture Diagram:** ![Screenshot 3](screenshots/week-12-assign-10-task-2-ss-3.png)
+
+### Implementation Summary
+Successfully deployed the three-tier Book Review App on Kubernetes, consisting of a Next.js frontend behind an Nginx reverse proxy, a Node.js/Express backend, and a MySQL database.
+
+Kubernetes ConfigMaps and Secrets were used to separate application configuration from sensitive credentials. MySQL was deployed using a StatefulSet and PersistentVolumeClaim. ClusterIP Services enabled internal communication, while NetworkPolicies restricted traffic to the backend and database tiers.
+
+### Validation
+Verified that the Kubernetes nodes and application Pods were running, the MySQL database `book_review_db` existed, and persistent storage was bound. Confirmed that the frontend loaded in a browser and that API requests returned book data through the Nginx reverse proxy.
+
+### Challenges and Resolutions
+- **Frontend and backend communication:** Configured Nginx to proxy API requests to the internal backend Service.
+- **Configuration management:** Used ConfigMaps for non-sensitive settings and Kubernetes Secrets for sensitive values.
+- **Database persistence:** Deployed MySQL with a StatefulSet and PersistentVolumeClaim.
+- **External access:** Used `kubectl port-forward` to access the frontend locally because the Kind cluster does not provide a public LoadBalancer endpoint by default.
+
+### Tools and Learning Resources
+- Kubernetes, Kind, `kubectl`, Docker, and YAML manifests
+- Nginx reverse proxy and Kubernetes Services
+- ConfigMaps, Secrets, StatefulSets, PersistentVolumeClaims, and NetworkPolicies
+- DMI Cohort 3 course materials and the official Kubernetes documentation
+
+### Future Improvements
+Potential enhancements include deploying to a managed cloud Kubernetes service, configuring a public Ingress or LoadBalancer endpoint with TLS, adding health probes and autoscaling, and packaging the deployment as a Helm chart.
 
 ---
 
